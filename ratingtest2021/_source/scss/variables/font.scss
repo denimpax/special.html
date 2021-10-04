@@ -1,0 +1,5 @@
+@mixin fusion($fs, $lh) {
+  font-family: 'Fusion', sans-serif !important;
+  font-size: $fs;
+  line-height: $lh;
+}

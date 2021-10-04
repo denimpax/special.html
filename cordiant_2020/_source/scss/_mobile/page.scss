@@ -1,0 +1,135 @@
+.page {
+  
+  img {
+    max-width: 100%;
+  }
+
+  h1 {
+    color: #333;
+    font: 26px/30px $exo-r;
+    margin: 20px 20px 20px;
+  }
+
+  form {
+    margin: 10px 20px 0;
+
+    .radio-control-border {
+      margin-bottom: 40px;
+      font-family: $hr;
+      
+      .control {
+        display: block;
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 15px;
+        padding-top: 3px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 24px;
+    
+        input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+    
+          &:checked {
+    
+            & ~ .control_indicator {
+              border-color: #20367A;
+              @include transition;
+    
+              &:after {
+                display: block;
+                @include gradient-horizontal(#20367A, #479CFF);
+                @include transition;
+              }
+
+              &:before {
+                opacity: 1;
+                background-image: url('../img/svg/check_w.svg');
+                @include transition;
+              }
+            }
+          }
+        }
+    
+        &_indicator {
+          position: absolute;
+          top: 6px;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          background: #fff;
+          border: 1px solid #999;
+          @include transition;
+    
+          &:after {
+            box-sizing: unset;
+            content: '';
+            position: absolute;
+            display: none;
+            left: 3px;
+            top: 3px;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: #999;
+            @include transition;
+          }
+
+          &:before {
+            content: '';
+            width: 9px;
+            height: 7px;
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 5px;
+            z-index: 5;
+            opacity: 0;
+            background-image: url('../img/svg/check_g.svg');
+            @include transition;
+          }
+        }
+    
+        &:hover {
+    
+          .control_indicator {
+
+            &:before {
+              opacity: 1;
+              @include transition;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    margin: 50px auto 0;
+    display: block;
+  }
+
+  &-footer {
+    margin: 40px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      color: #ccc;
+      font: 10px/10px $hr;
+    }
+
+    svg {
+      width: 145px;
+      height: 20px;
+
+      path {
+        fill: #233F85;
+      }
+    }
+  }
+}

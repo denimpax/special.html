@@ -1,0 +1,140 @@
+.fact {
+  background: #fff;
+  padding: 40px 0 10px;
+
+  &-title {
+    @include title;
+    font-weight: 100;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    span {
+      font-weight: 500;
+    }
+
+    &:after {
+      content: '';
+      width: 200px;
+      height: 5px;
+      display: block;
+      margin: 40px auto 70px;
+      background: $blue;
+    }
+  }
+
+  &-slider {
+    margin: -70px 0 40px;
+  
+    &-arrow {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      z-index: 500;
+    }
+
+    &-image {
+      flex: 1 0 450px;
+    }
+  
+    .swiper {
+  
+      &-slide {
+        color: $black;
+        text-decoration: none;
+        opacity: .3;
+        display: flex;
+        align-items: center;
+        @include transition;
+        position: relative;
+  
+        img {
+          max-width: 100%;
+          display: block;
+          margin: 0;
+        }
+  
+        p {
+          @include text;
+          font-weight: 100;
+          padding: 0 0 0 40px;
+        }
+  
+        &-active {
+          opacity: 1;
+        }
+  
+        &:before {
+          display: none;
+        }
+
+        &:nth-of-type(2) {
+
+          .fact-slider-image {
+            flex: 1 0 250px;
+          }
+        }
+      }
+  
+      &-button {
+  
+        &-next {
+          width: 80px;
+          height: 60px;
+          z-index: 100;
+          opacity: .3;
+          background: #fff url('../img/svg/arrow-black-right.svg') center no-repeat;
+          @include transition;
+  
+          &:hover {
+            opacity: .5;
+          }
+        }
+  
+        &-prev {
+          width: 80px;
+          height: 60px;
+          z-index: 100;
+          opacity: .3;
+          background: #fff url('../img/svg/arrow-black-left.svg') center no-repeat;
+          @include transition;
+  
+          &:hover {
+            opacity: .5;
+          }
+        }
+  
+        &-disabled {
+          opacity: .1;
+  
+          &:hover {
+            opacity: .1;
+          }
+        }
+      }
+  
+      &-wrapper {
+  
+        &._text {
+  
+          .swiper-slide {
+  
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &-pagination {
+
+        &-fraction {
+          font-size: 30px;
+          line-height: 30px;
+          font-family: $hl;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.mfp-bg {
+  background: #fff;
+  opacity: 1;
+}
+
+.mfp-ready {
+
+  @include respond-to(mobile) {
+    height: auto !important;
+  }
+}
+
+.mfp-container {
+
+  @include respond-to(mobile) {
+    padding: 0 !important;
+  }
+}
+
+.popup {
+
+  &-close {
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 3px;
+    opacity: .5;
+    @include transition;
+
+    &:before {
+      content: '+';
+      color: #999;
+      font: 80px/50px $open-l;
+      margin-left: 1px;
+      @include transform(rotate(45deg));
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include respond-to(mobile) {
+      width: 30px;
+      height: 30px;
+      background: rgba(0,0,0,.6);
+      opacity: 1;
+      top: 10px;
+      right: 10px;
+
+      &:before {
+        color: #fff;
+        font: 26px/26px $open-l;
+      }
+    }
+  }
+
+  &-layout {
+    width: 600px;
+    margin: 50px auto;
+
+    @include respond-to(mobile) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &-wrapper {
+    background: #fff;
+    padding-bottom: 40px;
+
+    @include respond-to(mobile) {
+      padding-bottom: 30px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    &_title {
+      color: $red-dark;
+      font: 40px/40px $exo-r;
+      margin: 30px 40px 0;
+
+      @include respond-to(mobile) {
+        font: 30px/30px $exo-r;
+        margin: 20px 30px 0;
+      }
+
+      span {
+
+        &.ln {
+          text-transform: uppercase;
+        }
+
+        &.rang {
+          color: #999;
+          font: 20px/20px $open-r;
+          display: block;
+          margin-top: 10px;
+
+          @include respond-to(mobile) {
+            font: 16px/16px $open-r;
+          }
+        }
+      }
+    }
+
+    &_text {
+      
+      p {
+        color: #000;
+        font: 18px/28px $open-l;
+        margin: 30px 40px 0;
+
+        @include respond-to(mobile) {
+          margin: 20px 30px 0;
+        }
+      }
+    }
+
+    &_table {
+      margin-top: 40px;
+
+      table {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        border-spacing: 0;
+
+        tbody {
+
+          tr {
+
+            td {
+              color: #000;
+              font: 18px/18px $open-l;
+              padding: 10px 0 10px 10px;
+              border-top: 1px solid #ccc;
+
+              &:last-child {
+                text-align: right;
+                padding-right: 10px;
+              }
+            }
+
+            &:first-child {
+
+              td {
+                border: 0;
+              }
+            }
+
+            &:last-child {
+
+              td {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}

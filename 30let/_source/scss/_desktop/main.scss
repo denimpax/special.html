@@ -1,0 +1,377 @@
+.cover {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: url('../img/photo/cover_des.jpg') top center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  p {
+    font: 34px/34px $open-r;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    span {
+      color: $red-dark;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+
+    &:before {
+      color: #000;
+      content: $arrow-l;
+      font: 50px/50px $icon;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      @include transform(rotate(90deg));
+    }
+  }
+}
+
+.sheff {
+  background: #fff;
+  padding: 60px 0;
+  margin-bottom: 60px;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+    grid-gap: 0 40px;
+
+    &-img {
+      position: relative;
+
+      img {
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+
+      &:after {
+        content: '';
+        width: 80%;
+        height: 30px;
+        background: #000;
+        position: absolute;
+        bottom: 0px; left: 0;
+        z-index: 1;
+        @include blur(30px);
+        opacity: .5;
+      } 
+    }
+
+    &-text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-right: 50px;
+
+      h2 {
+        font: 28px/28px $exo-r;
+        margin-bottom: 20px;
+        
+        @include respond-to(mac) {
+          font: 44px/44px $exo-r;
+        }
+      }
+
+      p {
+        color: rgb(100, 100, 100);
+        font: 14px/24px $open-l;
+
+        @include respond-to(mac) {
+          font: 18px/34px $open-l;
+        }
+      }
+
+      span {
+        display: block;
+        color: #ccc;
+        font: 16px/16px $open-sb;
+        text-decoration: none;
+        margin-top: 10px;
+
+        &:before {
+          color: #ccc;
+          content: $blog;
+          font: 14px/46px $icon;
+          margin-right: 5px;
+          @include transition;
+        }
+      }
+    }
+  }
+
+  &-time {
+    margin-top: 80px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font: 22px/34px $open-l;
+        text-align: center;
+        flex: 1 1 auto;
+      }
+
+      span {
+        font: bold 30px/34px $exo-r;
+        display: block;
+        text-align: center;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 7px;
+          height: 7px;
+          display: block;
+          background: $red-dark;
+          border: 10px solid #fff;
+          border-radius: 100%;
+          margin: 20px auto 15px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        display: block;
+        position: absolute;
+        background: #000;
+        bottom: 62px; left: 0;
+        z-index: 1;
+        opacity: .3;
+      }
+    }
+  }
+
+  &-button {
+    text-align: center;
+    margin-top: 60px;
+
+    a {
+      border: 1px solid !important;
+      border-radius: 0;
+    }
+  }
+}
+
+.post {
+  margin-bottom: 60px;
+
+  &-item {
+
+    &-img {
+      overflow: hidden;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 1;
+        background: #fff;
+        opacity: 0;
+        @include transition;
+      }
+
+      &:after {
+        width: 100%;
+        height: 100%;
+        content: '30';
+        color: $red-dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100px; left: 0;
+        z-index: 2;
+        opacity: 0;
+        @include transition;
+      }
+    }
+
+    &-comment {
+      color: #ccc;
+      font: 16px/16px $open-sb;
+      text-decoration: none;
+      margin-top: -10px;
+
+      &:before {
+        color: #ccc;
+        content: $blog;
+        font: 14px/46px $icon;
+        margin-right: 5px;
+        @include transition;
+      }
+    }
+
+    &:hover {
+
+      .post-item-img {
+
+        &:before {
+          opacity: .6;
+        }
+
+        &:after {
+          top: 0;
+          opacity: .6;
+        }
+      }
+    }
+  }
+
+  &._1 {
+
+    .post-item {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 30px 50px;
+    }
+
+    .post-item-img {
+      background-position: top left;
+      background-size: cover;
+
+      @include respond-to(desktop) {
+        width: 525px;
+        height: 350px;
+      }
+
+      @include respond-to(mac) {
+        width: 661px;
+        height: 371px;
+      }
+
+      &:after {
+        font: 250px/250px $open-b;
+      }
+    }
+
+    .post-item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .post-item-title {
+      font: 36px/44px $exo-r;
+      text-align: left;
+      padding: 30px 0 20px;
+    }
+
+    .post-item-text {
+      font: 16px/26px $open-r;
+      padding: 0 0 20px;
+    }
+
+    .post-item-comment {
+      margin-left: 0;
+    }
+  }
+
+  &._2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    .post-item-img {
+      background-position: top left;
+      background-size: cover;
+
+      @include respond-to(desktop) {
+        width: 465px;
+        height: 260px;
+      }
+
+      @include respond-to(mac) {
+        width: 585px;
+        height: 329px;
+      }
+
+      &:after {
+        font: 250px/250px $open-b;
+      }
+    }
+
+    .post-item-title {
+      font: 36px/44px $exo-r;
+      padding: 30px 30px 20px;
+    }
+
+    .post-item-text {
+      font: 16px/26px $open-r;
+      padding: 0 30px 20px;
+    }
+
+    .post-item-comment {
+      margin-left: 30px;
+    }
+  }
+
+  &._3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    .post-item-img {
+      background-position: top left;
+      background-size: cover;
+
+      @include respond-to(desktop) {
+        width: 100%;
+        height: 172px;
+      }
+
+      @include respond-to(mac) {
+        width: 100%;
+        height: 217px;
+      }
+
+      &:after {
+        font: 150px/150px $open-b;
+      }
+    }
+
+    .post-item-title {
+      font: 30px/40px $exo-r;
+      padding: 30px 20px 20px;
+    }
+
+    .post-item-text {
+      font: 16px/26px $open-r;
+      padding: 0 20px 20px;
+    }
+
+    .post-item-comment {
+      margin-left: 20px;
+    }
+  }
+}

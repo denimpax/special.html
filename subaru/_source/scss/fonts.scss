@@ -1,0 +1,61 @@
+@mixin font-face($fontFamily, $path, $fileName, $svgLabel, $fontWeight: normal, $fontStyle: normal) {
+	@font-face {
+		font-family: $fontFamily;
+
+		src: url('#{$path + $fileName}.eot');
+		src: url('#{$path + $fileName}.eot?#iefix') format('embedded-opentype'),
+		url('#{$path + $fileName}.woff') format('woff'),
+		url('#{$path + $fileName}.ttf') format('truetype'),
+		url('#{$path + $fileName}.svg##{$svgLabel}') format('svg');
+
+		font-weight: $fontWeight;
+		font-style: $fontStyle;
+	}
+}
+
+
+// Lato
+$lato-b:   'Lato Bold';
+$lato-bi:  'Lato BoldItalic';
+$lato-i:   'Lato Italic';
+$lato-l:   'Lato Light';
+$lato-li:  'Lato LightItalic';
+$lato-m:   'Lato Medium';
+$lato-mi:  'Lato MediumItalic';
+$lato-r:   'Lato Regular';
+$lato-sb:  'Lato Semibold';
+$lato-sbi: 'Lato SemiboldItalic';
+$lato-t:   'Lato Thin';
+$lato-ti:  'Lato ThinItalic';
+
+@include font-face($lato-b,   '../fonts/Lato/', 'Lato-Bold', 'Lato-Bold');
+@include font-face($lato-bi,  '../fonts/Lato/', 'Lato-BoldItalic', 'Lato-BoldItalic');
+@include font-face($lato-i,   '../fonts/Lato/', 'Lato-Italic', 'Lato-Italic');
+@include font-face($lato-l,   '../fonts/Lato/', 'Lato-Light', 'Lato-Light');
+@include font-face($lato-li,  '../fonts/Lato/', 'Lato-LightItalic', 'Lato-LightItalic');
+@include font-face($lato-m,   '../fonts/Lato/', 'Lato-Medium', 'Lato-Medium');
+@include font-face($lato-mi,  '../fonts/Lato/', 'Lato-MediumItalic', 'Lato-MediumItalic');
+@include font-face($lato-r,   '../fonts/Lato/', 'Lato-Regular', 'Lato-Regular');
+@include font-face($lato-sb,  '../fonts/Lato/', 'Lato-Semibold', 'Lato-Semibold');
+@include font-face($lato-sbi, '../fonts/Lato/', 'Lato-SemiboldItalic', 'Lato-SemiboldItalic');
+@include font-face($lato-t,   '../fonts/Lato/', 'Lato-Thin', 'Lato-Thin');
+@include font-face($lato-ti,  '../fonts/Lato/', 'Lato-ThinItalic', 'Lato-ThinItalic');
+
+// Museo Cyrl
+$mc-b:  'MuseoCyrl Bold';
+$mc-bi: 'MuseoCyrl BoldItalic';
+$mc-l:  'MuseoCyrl Light';
+$mc-li: 'MuseoCyrl LightItalic';
+$mc-r:  'MuseoCyrl Regular';
+$mc-i:  'MuseoCyrl Italic';
+$mc-sb: 'MuseoCyrl SemiBold';
+$mc-sbi:'MuseoCyrl SemiBold Italic';
+
+@include font-face($mc-b,   '../fonts/MuseoCyrl/', 'MuseoCyrl_b', 'MuseoCyrl_b');
+@include font-face($mc-bi,  '../fonts/MuseoCyrl/', 'MuseoCyrl_bi', 'MuseoCyrl_bi');
+@include font-face($mc-l,   '../fonts/MuseoCyrl/', 'MuseoCyrl_l', 'MuseoCyrl_l');
+@include font-face($mc-li,  '../fonts/MuseoCyrl/', 'MuseoCyrl_li', 'MuseoCyrl_li');
+@include font-face($mc-r,   '../fonts/MuseoCyrl/', 'MuseoCyrl_r', 'MuseoCyrl_r');
+@include font-face($mc-i,   '../fonts/MuseoCyrl/', 'MuseoCyrl_ri', 'MuseoCyrl_ri');
+@include font-face($mc-sb,  '../fonts/MuseoCyrl/', 'MuseoCyrl_sb', 'MuseoCyrl_sb');
+@include font-face($mc-sbi, '../fonts/MuseoCyrl/', 'MuseoCyrl_sbi', 'MuseoCyrl_sbi');

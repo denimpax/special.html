@@ -1,0 +1,183 @@
+// Basic Styles
+* {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+  overflow: visible;
+
+  &.active {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+body {
+  color: #333;
+  background: #fff;
+  font-family: $hr;
+  font-weight: 100;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+
+  @include respond-to(hover) {
+    overflow: -webkit-paged-y;
+  }
+}
+::selection {
+  color: #000;
+  background: #fff;
+}
+::-moz-selection {
+  color: #000;
+  background: #fff;
+}
+::-webkit-selection {
+  color: #000;
+  background: #fff;
+}
+
+select {
+  opacity: 0;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight: inherit;}
+
+// Form
+input, textarea {
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.winner {
+  width: 100%;
+  display: block;
+  background: #254B95;
+  z-index: 101;
+  position: relative;
+
+  &-close {
+    color: #fff;
+    font: 40px/40px $open-l;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    right: 41px;
+    transform: rotate(45deg);
+    opacity: .5;
+    @include transition;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include respond-to(mobile) {
+      top: 0px;
+      right: 11px;
+    }
+  }
+
+  &-title {
+    font: 100px/100px $bn-b;
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+    span {
+      display: block;
+      font: 80px/80px $bn-b;
+    }
+
+    @include respond-to(mobile) {
+      font-size: 40px;
+      line-height: 50px;
+      padding-top: 20px;
+      margin-bottom: 30px;
+
+      span {
+        font-size: 40px;
+      line-height: 40px;
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    ol {
+      counter-reset: ol-counter;
+      flex-basis: 400px;
+      margin: 0 10px 20px;
+
+      @include respond-to(mobile) {
+        flex-basis: 100%;
+        margin: 0 10px 30px;
+      }
+
+      p {
+        font: 60px/60px $exo-r;
+        color: #fff;
+        margin: 0 0 40px;
+        padding: 0;
+        text-align: left;
+        
+        span {
+          display: block;
+          font: 36px/36px $exo-r;
+        }
+
+        @include respond-to(mobile) {
+          font-size: 30px;
+          line-height: 20px;
+          margin-bottom: 15px;
+
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+
+      li {
+        color: #fff;
+        font: 30px/30px $open-r;
+        margin-bottom: 10px;
+
+        @include respond-to(mobile) {
+          font: 20px/20px $open-r;
+        }
+
+        &:before {
+          content: counter(ol-counter)'. ';
+          counter-increment: ol-counter;
+        }
+      }
+    }
+  }
+
+  p {
+    font: 20px/20px $open-r;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0 50px;
+
+    @include respond-to(mobile) {
+      font: 14px/18px $exo-r;
+      text-align: left;
+      margin: 0 20px;
+      padding: 0 0 30px;
+    }
+  }
+}

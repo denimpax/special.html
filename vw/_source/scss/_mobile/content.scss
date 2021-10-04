@@ -1,0 +1,260 @@
+.content {
+  margin-bottom: 40px;
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    @include title_m;
+    text-align: center;
+    margin-bottom: 20px;
+
+    span {
+      font-family: $hr;
+    }
+
+    &.center {
+      text-align: center;
+    }
+
+    &.p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  small {
+    color: #999;
+    @include text_m;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    margin: -10px 0 20px;
+  }
+
+  p {
+    @include text_m;
+    font-weight: 100;
+    margin: 0 auto 20px;
+
+    span {
+      font-family: $hr;
+
+      &.hide {
+        font-family: $hl;
+      }
+    }
+
+    a {
+      color: $blue;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    font-weight: 100;
+    margin: 40px auto 40px;
+
+
+    li {
+      @include text_m;
+      font-weight: 100;
+      margin-bottom: 20px;
+      padding: 0 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ol {
+    counter-reset: ol-counter;
+    @include text_m;
+    font-weight: 100;
+    margin: 40px auto 40px;
+    position: relative;
+
+
+    li {
+      @include text_m;
+      font-weight: 100;
+      margin-bottom: 20px;
+      padding: 0 20px;
+      display: flex;
+
+      &:before {
+        flex: 1 0 30px;
+        height: 30px;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 100%;
+        color: $blue;
+        margin-right: 20px;
+        content: counter(ol-counter);
+        counter-increment: ol-counter;
+        font-weight: 500;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      width: 178px;
+      height: 150px;
+      display: none;
+      position: absolute;
+      top: 100px; left: -130px;
+      background: url('../img/svg/icon.svg') top left no-repeat;
+    }
+  }
+
+  blockquote {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 40px;
+
+    .autor {
+      margin-bottom: 40px;
+
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0px auto 20px;
+      }
+
+      p {
+        text-align: center;
+
+        &.name {
+          @include text_m;
+          line-height: 28px;
+          margin-bottom: 10px;
+          font-style: normal;
+        }
+
+        &.status {
+          color: #999;
+          font-size: 14px;
+          line-height: 20px;
+          font-family: $hl;
+          font-style: italic;
+        }
+
+        &:before, &:after {
+          display: none;
+        }
+      }
+    }
+
+    p {
+      font: $blockquote_m;
+      width: auto;
+      margin: 0;
+      padding: 0 30px;
+      position: relative;
+
+      &:before {
+        color: #ccc;
+        content: '“';
+        font: 100px/0 Helvetica;
+        font-weight: 100;
+        position: absolute;
+        top: 40px; left: -10px;
+      }
+
+      &:after {
+        color: #ccc;
+        content: '”';
+        font: 100px/0 Helvetica;
+        font-weight: 100;
+        position: absolute;
+        bottom: -30px; right: -10px;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto 10px;
+
+  .autor {
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    p {
+      text-align: center;
+
+      &.name {
+        @include text_m;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+
+      &.status {
+        color: #999;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: $hl;
+      }
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    @include text_m;
+    width: auto;
+    margin: 0 20px 40px;
+    position: relative;
+
+    span {
+      font-family: $hr;
+    }
+  }
+}
+
+ .sponsor {
+   font-size: 12px;
+  line-height: 12px;
+  font-family: $hl;
+   font-weight: 100;
+   color: #999;
+   text-transform: uppercase;
+   margin: 20px;
+ }

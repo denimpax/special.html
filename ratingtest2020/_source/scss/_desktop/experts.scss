@@ -1,0 +1,54 @@
+.experts {
+  
+  &-title {
+    margin-top: 40px;
+
+    h2 {
+      color: #000;
+      text-align: center;
+      font: 60px/60px $exo-r;
+
+      &:after {
+        content: '';
+        width: 200px;
+        height: 5px;
+        display: block;
+        background: $red-dark;
+        margin: 40px auto 50px;
+      }
+    }
+  }
+
+  &-wrapp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &-image {
+      z-index: 1;
+
+      img {
+        max-width: 100%;
+        display: block;
+        box-shadow: 0 0 80px 0 rgba(0,0,0,0);
+        filter: saturate(0%);
+        @include transform(scale(1));
+        @include transition;
+      }
+
+      &:hover {
+        z-index: 2;
+
+        img {
+          filter: saturate(100%);
+          box-shadow: 0 0 80px 0 rgba(0,0,0,.5);
+          @include transform(scale(1.05));
+          @include transition;
+        }
+      }
+    }
+  }
+
+  .partners {
+    margin-top: 50px;
+  }
+}

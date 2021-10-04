@@ -1,0 +1,45 @@
+.experts {
+  
+  &-title {
+    margin-top: 40px;
+
+    h2 {
+      color: #000;
+      text-align: center;
+      font: 36px/36px $exo-r;
+
+      &:after {
+        content: '';
+        width: 40%;
+        height: 3px;
+        display: block;
+        background: $red-dark;
+        margin: 20px auto 40px;
+      }
+    }
+  }
+
+  &-wrapp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &-image {
+      z-index: 1;
+
+      img {
+        max-width: 100%;
+        box-shadow: 0 0 80px 0 rgba(0,0,0,0);
+        padding: 0;
+        margin: 0;
+        display: block;
+        filter: saturate(0%);
+        @include transform(scale(1));
+        @include transition;
+      }
+    }
+  }
+
+  .partners {
+    margin-top: 50px;
+  }
+}

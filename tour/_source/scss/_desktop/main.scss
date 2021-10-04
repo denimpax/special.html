@@ -1,0 +1,406 @@
+.main {
+
+  &-head {
+    position: relative;
+    margin-bottom: 40px;
+
+    &-text {
+
+      &_title {
+        font: 70px/70px $bn-b;
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 210px;
+          height: 64px;
+          display: block;
+          position: absolute;
+          top: 0; left: 610px;
+          background: url('../img/sticker.svg');
+        }
+      }
+
+      &_sub {
+        color: #666;
+        font: 30px/40px $open-l;
+        margin: 2px 0 23px;
+      }
+
+      &_date {
+        color: $blue2;
+        font: 34px/40px $open-r;
+        margin-bottom: 33px;
+      }
+    }
+
+    &-img {
+      max-width: 100%;
+      width: 800px;
+      position: absolute;
+      bottom: -50px; right: 0;
+
+      @include respond-to(laptop) {
+        max-width: 60%;
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      padding: 100px 0 250px;
+
+      @include respond-to(laptop) {
+        padding-bottom: 130px;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0; left: 0;
+      background: #fff;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+      z-index: 1;
+    }
+  }
+
+  &-about {
+    margin-bottom: 60px;
+    
+    h2 {
+      font: 60px/60px $fus;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font: 22px/36px $open-l;
+      margin: 0 100px 40px;
+
+      mark {
+        background: #AFD9FF;
+      }
+    }
+
+    &-cut {
+      display: none;
+    }
+
+    &-button {
+      text-align: center;
+    }
+  }
+
+  &-price {
+    margin-bottom: 60px;
+    position: relative;
+
+    &-wrapper {
+      padding: 60px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      box-shadow: 0px 5px 65px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(25px);
+      border-radius: 20px;
+
+      &_title {
+        margin-bottom: 60px;
+
+        h2 {
+          font: 60px/60px $fus;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        hr {
+          width: 150px;
+          height: 3px;
+          border: 0;
+          margin: 0 auto 30px;
+          background: linear-gradient(90.15deg, #A5E9FF 4.5%, rgba(165, 233, 255, 0) 98.56%), #4799E6;
+        }
+
+        p {
+          color: #999;
+          font: 30px/30px $open-l;
+          text-align: center;
+        }
+      }
+
+      &_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-text {
+          
+          p {
+            font: 24px/50px $open-l;
+          }
+        }
+
+        &-line {
+          width: 1px;
+          height: 180px;
+          background: #ccc;
+        }
+
+        &-price {
+          text-align: center;
+
+          p {
+            display: flex;
+            align-items: center;
+            font: 60px/60px $open-l;
+            margin-bottom: 50px;
+
+            @include respond-to(laptop) {
+              font: 40px/40px $open-l;
+            }
+
+            &:after {
+              content: $rubl-thin;
+              font: 42px/0 $icon;
+              margin-left: 10px;
+
+              @include respond-to(laptop) {
+                font-size: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-img {
+      max-width: 100%;
+      position: absolute;
+      bottom: -120px;
+      left: -100px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &-programms {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+
+    h2 {
+      font: 60px/60px $fus;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &-item {
+      display: flex;
+      margin: 0 100px 60px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $blue2;
+
+      &.nobr {
+        height: 240px;
+        overflow: hidden;
+        border: 0;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 100%;
+          height: 200px;
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          z-index: 2;
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f8f8f8+0,f8f8f8+100&0+1,0.6+40,1+70 */
+          background: -moz-linear-gradient(top,  rgba(248,248,248,0) 0%, rgba(248,248,248,0) 1%, rgba(248,248,248,0.6) 40%, rgba(248,248,248,1) 70%, rgba(248,248,248,1) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top,  rgba(248,248,248,0) 0%,rgba(248,248,248,0) 1%,rgba(248,248,248,0.6) 40%,rgba(248,248,248,1) 70%,rgba(248,248,248,1) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom,  rgba(248,248,248,0) 0%,rgba(248,248,248,0) 1%,rgba(248,248,248,0.6) 40%,rgba(248,248,248,1) 70%,rgba(248,248,248,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f8f8f8', endColorstr='#f8f8f8',GradientType=0 ); /* IE6-9 */
+        }
+      }
+
+      &-wrapper {
+        margin-top: -10px;
+      }
+
+      &-date {
+        width: 60px;
+        text-align: center;
+        margin-right: 50px;
+        font: 52px/36px $open-l;
+        
+        span {
+          padding-left: 4px;
+          display: block;
+          font: 16px/36px $open-r;
+          text-transform: uppercase;
+        }
+      }
+
+      &-text {
+
+        &_title {
+          font: 22px/36px $open-r;
+          margin-bottom: 30px;
+        }
+
+        &_wrapp {
+          margin-bottom: 30px;
+          display: flex;
+          justify-content: space-between;
+
+          &-main {
+
+            p {
+              font: 22px/36px $open-l;
+              position: relative;
+              padding: 0 0 20px 20px;
+
+              &:before {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 14px; left: 0;
+                border-style: solid;
+                border-width: 5px 0 5px 7px;
+                border-color: transparent transparent transparent #52a2e8;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-cut {
+      display: none;
+
+      .main-programms-item:last-child {
+        border: 0;
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+
+    &-button {
+      text-align: center;
+      position: relative;
+    }
+  }
+
+  &-miniprice {
+    padding: 60px 0;
+    -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 50% 90%, 0 100%, 0 0);
+    background: linear-gradient(90.15deg, #A5E9FF 4.5%, rgba(165, 233, 255, 0) 98.56%), #4799E6;
+
+    p {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font: 60px/60px $open-l;
+      margin: 0 0 5px 100px;
+
+      &:after {
+        content: $rubl-thin;
+        font: 42px/0 $icon;
+        margin-left: 10px;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-faq {
+    background: #fff;
+    margin-top: -30px;
+    padding: 90px 0 60px;
+
+    h2 {
+      font: 60px/60px $fus;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &-item {
+      margin: 0 100px 30px;
+      border-bottom: 1px dashed #ccc;
+      cursor: pointer;
+
+      &:last-child {
+        border: 0;
+        margin-bottom: 0;
+      }
+
+      &-title {
+        font: 36px/46px $fus;
+        margin-bottom: 30px;
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 23px;
+          height: 13px;
+          display: block;
+          position: absolute;
+          top: 20px; right: 0;
+          background: url('../img/arrow.svg');
+          transform: rotate(0deg);
+          @include transition;
+        }
+
+        &.active {
+
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      &-text {
+        display: none;
+
+        p {
+          font: 22px/36px $open-l;
+          margin: 0 0 40px;
+
+          a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 2px solid $blue2;
+
+            &:hover {
+              color: $blue2;
+              border-color: $tr;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-pricebtn {
+    padding: 60px 0;
+    text-align: center;
+
+    a {
+      margin: 0 20px;
+    }
+  }
+}

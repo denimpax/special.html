@@ -1,0 +1,108 @@
+.cover {
+  height: 420px;
+  overflow: hidden;
+  background: $cover;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include fusion(90px, 133px);
+
+      span {
+        font-size: 130px;
+      }
+    }
+
+    img {
+      height: 360px;
+      position: absolute;
+      bottom: 30px;
+      right: 70px;
+      z-index: 2;
+    }
+    
+    &::after {
+      content: '';
+      width: 500px;
+      height: 500px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -250px;
+      background: $cover_blur;
+      opacity: .7;
+      z-index: 1;
+      @include border-radius(100%);
+      @include blur(400px);
+    }
+  }
+
+  &-footer {
+    height: 150px;
+    @include grad;
+
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+
+      .btn_20 {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: $white;
+        background: $blue2;
+        padding-right: 50px;
+        text-decoration: none;
+        position: relative;
+        z-index: 2;
+        @include fusion(24px, 24px);
+
+        &_img {
+          width: 70px;
+          height: 70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+          box-shadow: 0 0 60px 0 rgba(0,0,0,.2);
+          @include border-radius(100%);
+          @include transition;
+        }
+
+        &:hover {
+          
+          .btn_20_img {
+            background: $blue2h;
+          }
+        }
+      }
+
+      .partners {
+        position: relative;
+        z-index: 2;
+      }
+
+      &::after {
+        content: '';
+        width: calc(100% - 200px);
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $white;
+      }
+    }
+  }
+}

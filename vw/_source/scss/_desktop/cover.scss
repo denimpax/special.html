@@ -1,0 +1,94 @@
+.cover {
+  width: 100%;
+  height: calc(100vh - 50px);
+  background: url('../img/photo/cover.jpg') center no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 40px;
+
+  h1 {
+    color: #fff;
+    @include title;
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    z-index: 2;
+
+    @include respond-to(extra) {
+      top: 55vh;
+    }
+
+    span {
+      font-family: $hr;
+    }
+
+    &:after {
+      content: '';
+      width: 236px;
+      height: 80px;
+      display: block;
+      background: url('../img/svg/logo.svg') top left no-repeat;
+      margin: 40px 0 0 40px;
+    }
+  }
+
+  &-menu {
+    color: #fff;
+    font: 14px/14px Helvetica;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .03em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 20px;
+    left: 0;
+    opacity: .6;
+
+    &._show {
+
+      &:before {
+        content: '';
+        width: 24px;
+        height: 22px;
+        display: block;
+        margin-right: 20px;
+        background: url('../img/svg/burger.svg') top left no-repeat;
+      }
+    }
+
+    &._hide {
+      margin-top: 55px;
+      padding-left: 35px;
+
+      &:before {
+        content: '';
+        width: 20px;
+        height: 2px;
+        display: block;
+        background: #fff;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        @include transform(rotate(45deg));
+      }
+
+      &:after {
+        content: '';
+        width: 20px;
+        height: 2px;
+        display: block;
+        background: #fff;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        @include transform(rotate(-45deg));
+      }
+    }
+
+    &:hover {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.cover {
+  
+  &-images {
+    background: #fff;
+    padding: 0 0 40px;
+
+    img {
+      max-width: 100%;
+    }
+
+    &-title {
+      color: #000;
+      font: 30px/30px $open-r;
+      text-align: center;
+      padding: 30px 0;
+    }
+  }
+
+  &-video {
+    position: relative;
+    margin-top: 20px;
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+
+      &:before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: url('../img/svg/play.svg') center no-repeat;
+        background-size: contain;
+        border-radius: 100%;
+        bottom: 10px;
+        right: 10px;
+        z-index: 2;
+      }
+
+      &:after {
+        content: 'Смотреть';
+        height: 30px;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        background: #55ADE7;
+        font-size: 12px;
+        padding: 0 35px 0 15px;
+        position: absolute;
+        border-radius: 15px;
+        bottom: 10px;
+        right: 12px;
+        z-index: 1;
+      }
+    }
+  }
+
+  &-title {
+    margin-top: 30px;
+
+    h1 {
+      color: #000;
+      font: 30px/36px $exo-r;
+      text-align: center;
+
+      &:after {
+        content: '';
+        width: 70%;
+        height: 3px;
+        display: block;
+        margin: 30px auto 0;
+        background: $red-dark;
+      }
+    }
+  }
+
+  .partners {
+    margin-top: 20px;
+  }
+}

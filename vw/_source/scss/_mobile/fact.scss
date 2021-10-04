@@ -1,0 +1,136 @@
+.fact {
+  background: #fff;
+  padding: 40px 0 10px;
+
+  &-title {
+    @include title_m;
+    font-weight: 100;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    span {
+      font-weight: 500;
+    }
+
+    &:after {
+      content: '';
+      width: 130px;
+      height: 3px;
+      display: block;
+      margin: 20px auto 30px;
+      background: $blue;
+    }
+  }
+
+  &-slider {
+    margin: 0px 0 40px;
+  
+    &-arrow {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 500;
+    }
+
+    &-image {
+      flex: 1 0 450px;
+    }
+  
+    .swiper {
+  
+      &-slide {
+        color: $black;
+        text-decoration: none;
+        opacity: .3;
+        @include transition;
+        position: relative;
+  
+        img {
+          max-width: 100%;
+          display: block;
+          margin: 0 0 20px;
+        }
+  
+        p {
+          @include text_m;
+          font-weight: 100;
+        }
+  
+        &-active {
+          opacity: 1;
+        }
+  
+        &:before {
+          display: none;
+        }
+      }
+  
+      &-button {
+
+        &-next {
+          width: 20px;
+          height: 20px;
+          z-index: 100;
+          opacity: .3;
+          background: url('../img/svg/arrow-black-right.svg') center no-repeat;
+          background-size: contain;
+          margin-left: 10px;
+          margin-bottom: 10px;
+          @include transition;
+  
+          &:hover {
+            opacity: .5;
+          }
+        }
+  
+        &-prev {
+          width: 20px;
+          height: 20px;
+          z-index: 100;
+          opacity: .3;
+          display: block;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background: url('../img/svg/arrow-black-left.svg') center no-repeat;
+          background-size: contain;
+          @include transition;
+  
+          &:hover {
+            opacity: .5;
+          }
+        }
+  
+        &-disabled {
+          opacity: .1;
+  
+          &:hover {
+            opacity: .1;
+          }
+        }
+      }
+  
+      &-wrapper {
+  
+        &._text {
+  
+          .swiper-slide {
+  
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &-pagination {
+
+        &-fraction {
+          font: 20px/20px Helvetica;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}

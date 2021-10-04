@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+	<head lang='ru'>
+		<meta charset="utf-8">
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<title>KIA</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="1024">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="language" content="Russia">
+		<meta name="revisit-after" content="3">
+
+		<link rel="stylesheet" href="css/desktop.css" type="text/css" media="screen, projection">
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+		<link rel="shortcut icon" href="../static/img/favicon.ico">
+	</head>
+	<body id="page" class="page-kia">
+
+  <header>
+  	<div class="container menu">
+  		<div class="menu-left">
+  			<a href="index.html" class="menu-left-logo"><img src="img/site/logo.png"></a>
+  			<a href="theMain.html" class="menu-left-item">Новости</a>
+  			<a href="theMain.html" class="menu-left-item">Тесты</a>
+  			<a style="opacity: .3;" href="" class="menu-left-item">Грузовики</a>
+  			<a href="podhivkaMain.html" class="menu-left-item">Подшивка</a>
+  			<a href="subscripts_4.html" class="menu-left-item lsb js-subscript"><span>Подписка</span></a>
+  			<span class="menu-left-item ml"><span>Главное</span></span>
+  		</div>
+  		<div class="menu-right">
+  			<div class="menu-right-check tooltip-bottom" title="Все публикации подряд">
+  				<input type="checkbox" class="menu-right-check-cb" id="cb" />
+  				<label for="cb"></label>
+  			</div>
+  			<a href="javascript:void(0);" class="menu-right-search js-show-search"></a>
+  			<!-- <a href="#login" class="menu-right-user  $login-class  js-login_demo"></a> -->
+  			<a href="#enter" class="menu-right-user none js-login_demo"></a>
+  			<div class="menu-right-profil-loger" style="display:none;">
+  				<span class="avatar-notification">1</span>
+  				<img src="img/site/avatar.jpg" class="js-profil">
+  				<div class="item js-profil-box">
+  					<div class="item-user">
+  						<img src="img/site/avatar.jpg">
+  						<p>Константин Макармыжин</p>
+  					</div>
+  					<div class="item-nav">
+  						<a href="profilMain.html">Личный кабинет</a>
+  						<a href="">Выход</a>
+  					</div>
+  					<span class="item-closed js-profil-closed"></span>
+  				</div>
+  			</div>
+  			<a href="javascript:void(0);" class="menu-right-burger js-show-menu">
+  				<span></span>
+  				<span></span>
+  				<span></span>
+  			</a>
+  		</div>
+  	</div>
+  
+  	<div class="header-search">
+  		<form action="searchResult.html" class="container">
+  			<input type="text" id="search-input" placeholder="Введите ключевые слова и нажмите Enter">
+  			<input type="submit" hidden>
+  		</form>
+  	</div>
+  
+  	<div class="header-menu">
+  		<div class="container">
+  			<ul class="header-menu-nav">
+  				<li><a href="clubMain.html">Клуб</a></li>
+  				<li><a style="opacity: .3;" href="">Автоспорт</a></li>
+  				<li><a href="arcapMain.html" href="">Arcap</a></li>
+  				<li><a href="parking.html">Парковка</a></li>
+  				<li><a href="location.html">Кто где?</a></li>
+  				<li><a href="autorMain.html">Авторы</a></li>
+  				<li><a href="voteMain.html">Опросы</a></li>
+  				<li><a href="subscript.html">Рассылки</a></li>
+  			</ul>
+  			<ul class="header-menu-soc">
+  				<li><a href="contacts.html" class="text">Контакты</a></li>
+  				<li><a href="mediakit.html" class="text">Реклама</a></li>
+  				<li><a href="" class="vk soc">v</a></li>
+  				<li><a href="" class="fb soc">f</a></li>
+  				<li><a href="" class="tw soc">t</a></li>
+  				<li><a href="" class="in soc">i</a></li>
+  				<li><a href="" class="yt soc">y</a></li>
+  			</ul>
+  		</div>
+  
+  		<div class="header-menu-rubrik">
+  			<div class="container rubrik">
+  				<div class="rubrik-title">Темы</div>
+  				<ul>
+  					<li><a href="tagMain.html">AR-Live</a></li>
+  					<li><a href="tagMain.html">Know-how</a></li>
+  					<li><a href="tagMain.html">Автомобиль и общество</a></li>
+  					<li><a href="tagMain.html">Авторынок</a></li>
+  					<li><a href="tagMain.html">Автоспорт</a></li>
+  					<li><a href="tagMain.html">Безопасность</a></li>
+  					<li><a href="tagMain.html">Блог Авторевю</a></li>
+  					<li><a href="tagMain.html">Вторые руки</a></li>
+  					<li><a href="tagMain.html">Выезд</a></li>
+  					<li><a href="tagMain.html">Выставки</a></li>
+  					<li><a href="tagMain.html">Грузовики и автобусы</a></li>
+  					<li><a href="tagMain.html">Длительные тесты</a></li>
+  					<li><a href="tagMain.html">Дуэль-тест</a></li>
+  					<li><a href="tagMain.html">Заводы и производства</a></li>
+  					<li><a href="tagMain.html">Краш-тесты</a></li>
+  					<li><a href="tagMain.html">Кунсткамера</a></li>
+  					<li><a href="tagMain.html">Ликбез</a></li>
+  					<li><a href="tagMain.html">Масла и аксессуары</a></li>
+  					<li><a href="tagMain.html">Мото</a></li>
+  					<li><a href="tagMain.html">Первая встреча</a></li>
+  					<li><a href="tagMain.html">Письма</a></li>
+  					<li><a href="tagMain.html">По дорогам и без них</a></li>
+  					<li><a href="tagMain.html">Примеряем на себя</a></li>
+  					<li><a href="tagMain.html">Проверка на дорогах</a></li>
+  					<li><a href="tagMain.html">Прямоток</a></li>
+  					<li><a href="tagMain.html">Ретро</a></li>
+  					<li><a href="tagMain.html">Ретротест</a></li>
+  					<li><a href="tagMain.html">Своими глазами</a></li>
+  					<li><a href="tagMain.html">Сектор обзора</a></li>
+  					<li><a href="tagMain.html">Софт</a></li>
+  					<li><a href="tagMain.html">Спринт-тест</a></li>
+  					<li><a href="tagMain.html">Сравнительные тесты</a></li>
+  					<li><a href="tagMain.html">Статистика</a></li>
+  					<li><a href="tagMain.html">Супертест</a></li>
+  					<li><a href="tagMain.html">Тест топлива</a></li>
+  					<li><a href="tagMain.html">Тесты на надежность</a></li>
+  					<li><a href="tagMain.html">Топливная экономичность</a></li>
+  					<li><a href="tagMain.html">Угон-шоу</a></li>
+  					<li><a href="tagMain.html">Шины</a></li>
+  					<li><a href="tagMain.html">Экспедиции</a></li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  </header>
+  
+  <div class="main">
+    	<div class="main-head">
+    		<img src="img/sun.png" class="sun">
+    		<h1>KIA предлагает зимний пакет<br>«Теплые опции» на специальных условиях!</h1>
+    		<img src="img/head.png" class="main-head-img">
+    		<ul class="container">
+    			<li><img src="img/o0.png"></li>
+    			<li><img src="img/o1.png" class="tooltip-bottom" title="Электрообогрев лобового стекла"></li>
+    			<li><img src="img/o2.png" class="tooltip-bottom" title="Подогрев передних сидений"></li>
+    			<li><img src="img/o3.png" class="tooltip-bottom" title="Подогрев рулевого колеса"></li>
+    			<li><img src="img/o4.png" class="tooltip-bottom" title="Зеркала заднего вида с<br>электроприводом и подогревом"></li>
+    			<li><img src="img/o5.png" class="tooltip-bottom" title="Подогрев лобового стекла в<br>зоне стоянки стеклоочистителей"></li>
+    			<li><img src="img/o6.png" class="tooltip-bottom" title="Подогрев форсунок<br>стеклоомывателя"></li>
+    			<li><img src="img/o7.png" class="tooltip-bottom" title="Дополнительный электрический<br>отопитель салона"></li>
+    			<li><img src="img/o8.png" class="tooltip-bottom" title="Индикатор низкого уровня<br>омывающей жидкости"></li>
+    		</ul>
+    		<ul id="scene" class="scene">
+    	    <li class="layer" data-depth="0.20"><img src="img/snow-1.png"></li>
+    	    <li class="layer " data-depth="0.10"><img src="img/snow-2.png"></li>
+    	  </ul>
+    	  <a href="javascript:void(0);" rel="#page2" class="more-lnk"></a>
+    	</div>
+    	
+    	<div id="page2" class="main-content">
+    		<div class="container">
+    			<h2>Теплые опции KIA</h2>
+    			<p>Одними из главных особенностей русской зимы являются непростые погодные условия и частые заморозки. Чтобы повысить уровень комфорта, KIA представляет Пакет «Теплые опции», который включает в себя самый востребованный набор функции. Пакет разработан индивидуально для каждой из моделей, учитывая особенности нашей зимы. KIA учитывает все пожелания и предоставляет такой уровень комфорта для своих клиентов, что зима теперь только в радость.</p>
+    		</div>
+    	</div>
+    	<div class="main-options">
+    		<div class="container tabs">
+    			<ul>
+    				<li><a href="#rio"><img src="img/tab-rio.png"></a></li>
+    				<li><a href="#ceed"><img src="img/tab-ceed.png"></a></li>
+    				<li><a href="#sportage"><img src="img/tab-sportage.png"></a></li>
+    			</ul>
+    			<div id="rio">
+    				<img src="img/tab-car-rio.png">
+    				<ul class="option">
+    					<li>
+    						<img src="img/o2.png">
+    						<p>Подогрев передних сидений</p>
+    					</li>
+    					<li>
+    						<img src="img/o3.png">
+    						<p>Подогрев рулевого колеса</p>
+    					</li>
+    					<li>
+    						<img src="img/o4.png">
+    						<p>Зеркала заднего вида с электроприводом и подогревом</p>
+    					</li>
+    					<li>
+    						<img src="img/o5.png">
+    						<p>Подогрев лобового стекла в зоне стоянки стеклоочистителей</p>
+    					</li>
+    					<li>
+    						<img src="img/o6.png">
+    						<p>Подогрев форсунок стеклоомывателя</p>
+    					</li>
+    					<li>
+    						<img src="img/o1.png">
+    						<p>Электрообогрев лобового стекла</p>
+    					</li>
+    				</ul>
+    	
+    				<div class="buton">
+    					<a href="https://www.kia.ru/dealers/?model=20733940" target="_target"><img src="img/map.png">Найти дилера</a>
+    					<a href="https://www.kia.ru/request/order_testdrive/" target="_target"><img src="img/test.png">Запись на тест-драйв</a>
+    					<a href="https://www.kia.ru/buy/calc/?step=2&model=sportage" target="_target"><img src="img/calc.png">Рассчитать кредит</a>
+    				</div>
+    	
+    				<div class="container table">
+    					<table>
+    						<thead>
+    							<tr>
+    								<th>Комплектация</th>
+    								<th>Comfort</th>
+    								<th>Comfort<br>Кондиционер</th>
+    								<th>Comfort<br>Аудио</th>
+    								<th>Luxe</th>
+    								<th>RED Line</th>
+    								<th>Comfort<br>Аудио</th>
+    								<th>Prestige</th>
+    								<th>Premium</th>
+    								<th>Premium<br>Navi</th>
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td>Подогрев передних сидений</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев рулевого колеса</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Зеркала заднего вида с<br>электроприводом и подогревом</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев лобового стекла в<br>зоне стоянки стеклоочистителей</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев форсунок стеклоомывателя</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Электрообогрев лобового стекла</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td><a href="https://www.kia.ru/models/rio/options/" target="_blank">Цена с учетом<br>спецпредложений, от **</a></td>
+    								<td>-111 200<span class="red">528 700</span></td>
+    								<td>-121 200<span class="red">548 700</span></td>
+    								<td>-121 200<span class="red">568 700</span></td>
+    								<td>-121 200<span class="red">618 700</span></td>
+    								<td>-121 200<span class="red">647 700</span></td>
+    								<td>-121 200<span class="red">628 700</span></td>
+    								<td>-121 200<span class="red">683 700</span></td>
+    								<td>-121 200<span class="red">783 700</span></td>
+    								<td>-121 200<span class="red">810 700</span></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    			<div id="ceed">
+    				<img src="img/tab-car-ceed.png">
+    				<ul class="option">
+    					<li>
+    						<img src="img/o2.png">
+    						<p>Подогрев передних сидений</p>
+    					</li>
+    					<li>
+    						<img src="img/o3.png">
+    						<p>Подогрев рулевого колеса</p>
+    					</li>
+    					<li>
+    						<img src="img/o4.png">
+    						<p>Зеркала заднего вида с электроприводом и подогревом</p>
+    					</li>
+    					<li>
+    						<img src="img/o5.png">
+    						<p>Подогрев лобового стекла в зоне стоянки стеклоочистителей</p>
+    					</li>
+    					<li>
+    						<img src="img/o6.png">
+    						<p>Подогрев форсунок стеклоомывателя</p>
+    					</li>
+    					<li>
+    						<img src="img/o7.png">
+    						<p>Дополнительный электрический отопитель салона</p>
+    					</li>
+    				</ul>
+    	
+    				<div class="buton">
+    					<a href="https://www.kia.ru/dealers/?model=20733940" target="_target"><img src="img/map.png">Найти дилера</a>
+    					<a href="https://www.kia.ru/request/order_testdrive/" target="_target"><img src="img/test.png">Запись на тест-драйв</a>
+    					<a href="https://www.kia.ru/buy/calc/?step=2&model=sportage" target="_target"><img src="img/calc.png">Рассчитать кредит</a>
+    				</div>
+    	
+    				<div class="container table">
+    					<table>
+    						<thead>
+    							<tr>
+    								<th>Комплектация</th>
+    								<th>Classic AC</th>
+    								<th>Comfort</th>
+    								<th>RED Line</th>
+    								<th>Luxe</th>
+    								<th>Prestige</th>
+    								<th>Premium</th>
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td>Подогрев передних сидений</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев рулевого колеса</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Зеркала заднего вида с<br>электроприводом и подогревом</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев лобового стекла в<br>зоне стоянки стеклоочистителей</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев форсунок стеклоомывателя</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Дополнительный электрический отопитель салона</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td><a href="https://www.kia.ru/models/ceed/options/" target="_blank">Цена с учетом<br>спецпредложений, от **</a></td>
+    								<td>-100 000<span class="red">739 900</span></td>
+    								<td>-100 000<span class="red">794 900</span></td>
+    								<td>-60 000<span class="red">931 900</span></td>
+    								<td>-60 000<span class="red">929 900</span></td>
+    								<td>-60 000<span class="red">1 024 900</span></td>
+    								<td>-60 000<span class="red">1 164 900</span></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    			<div id="sportage">
+    				<img src="img/tab-car-sportage.png">
+    				<ul class="option">
+    					<li>
+    						<img src="img/o2.png">
+    						<p>Подогрев передних сидений</p>
+    					</li>
+    					<li>
+    						<img src="img/o3.png">
+    						<p>Подогрев рулевого колеса</p>
+    					</li>
+    					<li>
+    						<img src="img/o2.png">
+    						<p>Подогрев задних сидений</p>
+    					</li>
+    					<li>
+    						<img src="img/o2.png">
+    						<p>Индикатор низкого уровня омывающей жидкости</p>
+    					</li>
+    					<li>
+    						<img src="img/o5.png">
+    						<p>Индикатор низкого уровня омывающей жидкости</p>
+    					</li>
+    					<li>
+    						<img src="img/o8.png">
+    						<p>Боковые зеркала с электроприводом и подогревом</p>
+    					</li>
+    				</ul>
+    	
+    				<div class="buton">
+    					<a href="https://www.kia.ru/dealers/?model=20733940" target="_target"><img src="img/map.png">Найти дилера</a>
+    					<a href="https://www.kia.ru/request/order_testdrive/" target="_target"><img src="img/test.png">Запись на тест-драйв</a>
+    					<a href="https://www.kia.ru/buy/calc/?step=2&model=sportage" target="_target"><img src="img/calc.png">Рассчитать кредит</a>
+    				</div>
+    	
+    				<div class="container table">
+    					<table>
+    						<thead>
+    							<tr>
+    								<th>Комплектация</th>
+    								<th>Classic</th>
+    								<th>Classic "Тёплые<br>опции"</th>
+    								<th>Comfort</th>
+    								<th>Luxe</th>
+    								<th>Prestige</th>
+    								<th>Premium</th>
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr>
+    								<td>Подогрев передних сидений</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев рулевого колеса</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев задних сидений</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Подогрев лобового стекла в зоне<br>стоянки стеклоочистителей</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Индикатор низкого уровня<br>омывающей жидкости</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td>Боковые зеркала с<br>электроприводом и подогревом</td>
+    								<td>—</td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    								<td><span class="yes"></span></td>
+    							</tr>
+    							<tr>
+    								<td><a href="https://www.kia.ru/models/sportage/options/" target="_blank">Цена с учетом<br>спецпредложений, от **</a></td>
+    								<td>-55 000<span class="red">1 164 900</span></td>
+    								<td>-75 000<span class="red">1 244 900</span></td>
+    								<td>-75 000<span class="red">1 294 900</span></td>
+    								<td>-75 000<span class="red">1 414 900</span></td>
+    								<td>-75 000<span class="red">1 654 900</span></td>
+    								<td>-75 000<span class="red">1 884 900</span></td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div>
+    	
+    		<div class="text-more container">
+    			<p>** Специальное предложение действует на покупку нового автомобиля с 1-го декабря 2016 года по 31-е декабря 2016 года на автомобили 2016 производственного года. Предложение носит информационный характер, не является публичной офертой (ст. 437 ГК РФ), действует с 01.12.2016 по 31.12.2016.</p>
+    		</div>
+    	</div>
+    	
+    	<div class="main-benefit">
+    			<div class="container">
+    				<div class="title">Ваша выгода в декабре</div>
+    				<div class="wrapp">
+    					<a href="https://www.kia.ru/buy/special/rio/" target="_blank" class="item">
+    						<div class="item-title">Rio</div>
+    						<div class="item-price">От 526 900 руб</div>
+    						<img src="img/vigoda-rio.png" class="item-img">
+    						<p class="item-but">Выгода до 121 200 руб.*</p>
+    					</a>
+    					<a href="https://www.kia.ru/buy/special/ceed/" target="_blank" class="item">
+    						<div class="item-title">cee`d</div>
+    						<div class="item-price">От 694 900 руб</div>
+    						<img src="img/vigoda-ceed.png" class="item-img">
+    						<p class="item-but">Выгода до 100 000 руб.*</p>
+    					</a>
+    					<a href="https://www.kia.ru/buy/special/sportage/" target="_blank" class="item">
+    						<div class="item-title">Новый Sportage</div>
+    						<div class="item-price">От 1 164 900 руб</div>
+    						<img src="img/vigoda-sportage.png" class="item-img">
+    						<p class="item-but">Выгода до 75 000 руб.*</p>
+    					</a>
+    				</div>
+    			</div>
+    		</div>
+    		
+    </div>
+    
+  <footer>
+      	<div class="container">
+      		<p>Реклама. © 2016 КИА Моторс Рус.<br>Информационная линия KIA: 8 800 301 08 80</p>
+      		<div class="soc">
+      			<a href="https://vk.com/kiamotorsrus" target="_blank"><img src="img/vk.png"></a>
+      			<a href="https://plus.google.com/103618960074994528063/posts" target="_blank"><img src="img/go.png"></a>
+      			<a href="https://www.flickr.com/photos/kiamotorsrus/" target="_blank"><img src="img/fl.png"></a>
+      			<a href="https://instagram.com/kiamotorsrussia" target="_blank"><img src="img/in.png"></a>
+      			<a href="https://twitter.com/KIAMotorsRussia" target="_blank"><img src="img/tw.png"></a>
+      			<a href="https://www.youtube.com/user/KIAMotorsRussia" target="_blank"><img src="img/yt.png"></a>
+      			<a href="https://kiablog.livejournal.com/" target="_blank"><img src="img/lj.png"></a>
+      			<a href="https://www.facebook.com/kiamotorsrus" target="_blank"><img src="img/fb.png"></a>
+      			<a href="https://ok.ru/group/57054967365668" target="_blank"><img src="img/ok.png"></a>
+      		</div>
+      	</div>
+      </footer>
+      <div class="kia-foot">
+      	<div class="container">
+      		<a href="https://www.kia.ru" target="_blank"><img src="img/kia-foot.png"></a>
+      	</div>
+      </div>
+      
+
+  </body>
+</html>

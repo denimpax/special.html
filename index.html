@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head lang='ru'>
+		<meta charset="utf-8">
+		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<title>Front-end — Авторевю</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="language" content="Russia">
+		<meta name="revisit-after" content="3">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.wrapp ol').hover(
+          function(){
+            $('.wrapp ol').css('opacity', '.2');
+            $(this).css('opacity', '1');
+          },
+          function(){
+            $('.wrapp ol').css('opacity', '1');
+          });
+      });
+    </script>
+
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+        outline: 0;
+      }
+
+      body {
+        color: #333;
+        font: 16px/26px 'Open Sans', sans-serif;
+        background: #f8f8f8;
+      }
+
+      .wrapp {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 50px;
+        box-sizing: border-box;
+      }
+
+      .wrapp ol {
+        position: relative;
+        padding: 20px 40px;
+        background: #fff;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+        transition: all 250ms ease-in-out;
+        opacity: 1;
+        transform: scale(1);
+        overflow: hidden;
+      }
+
+      .wrapp ol:first-child:before {
+        content: 'new';
+        font: 10px/10px 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 900;
+        padding: 5px 30px;
+        background: rgb(0, 162, 255);
+        position: absolute;
+        top: 10px; right: -20px;
+        transform: rotate(45deg);
+      }
+
+      .wrapp ol:hover {
+        opacity: 1;
+        transform: scale(1.07);
+        box-shadow: 0 1px 20px 0 rgba(0,0,0,.1);
+      }
+
+      .wrapp ol li {
+        list-style-type: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .wrapp ol li:last-child {
+        border: 0;
+      }
+
+      .wrapp ol p {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      .wrapp ol p:after {
+        content: '';
+        height: 2px;
+        display: block;
+        margin-top: 10px;
+        background:#ea1c24;
+        
+      }
+
+      .wrapp ol li a {
+        color: #333;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 26px;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+        transition: all 250ms ease-in-out;
+      }
+
+      .wrapp ol li a:hover {
+        color: #ea1c24;
+      }
+
+      .wrapp ol li a span {
+        font-size: 9px;
+        font-weight: 900;
+        color: #ccc;
+        text-transform: uppercase;
+      }
+
+      .wrapp ol li a span span {
+        color: #999;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="wrapp">
+      <ol>
+        <p>Volkswagen Bulli</p>
+        <li><a href="vw/_build/des_index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="vw/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>Магазин Авторевю</p>
+        <li><a href="shop/_build/des_index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="shop/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>Cordiant 2019</p>
+        <li><a href="cordiant_2019/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="cordiant_2019/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>РОСГОССТРАХ</p>
+        <li><a href="rgs/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="rgs/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>Subaru</p>
+        <li><a href="subaru/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="subaru/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+				<p>Ингосстрах</p>
+        <li><a href="ingos/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="ingos/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>Amarok</p>
+        <li><a href="amarok/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="amarok/page.html">Страница <span>// <span>desktop</span></span></a></li>
+        <li><a href="amarok/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+        <li><a href="amarok/mob_page.html">Страница <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>Cordiant</p>
+        <li><a href="cordiant/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="cordiant/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>Kia</p>
+        <li><a href="kia/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="kia/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+
+      <ol>
+        <p>Shanhai 2017</p>
+        <li><a href="shanhai_2017/_build/index.html">Главная <span>// <span>desktop</span></span></a></li>
+        <li><a href="shanhai_2017/_build/mob_index.html">Главная <span>// <span>mobile</span></span></a></li>
+      </ol>
+    </div>
+  </body>
+</html>

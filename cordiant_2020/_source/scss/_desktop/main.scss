@@ -1,0 +1,273 @@
+.main {
+  
+  &-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 80px;
+
+    &-image {
+      position: relative;
+
+      img {
+        max-width: 100%;
+      }
+
+      &_logo {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+
+        svg {
+          width: 232px;
+          height: 32px;
+        }
+
+        @include respond-to(extra) {
+          top: 60px;
+          right: 60px;
+
+          svg {
+            width: 363px;
+            height: 50px;
+          }
+        }
+      }
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font: 28px/38px $exo-r;
+        
+        @include respond-to(mac) {
+          font: 34px/44px $exo-r;
+        }
+
+        @include respond-to(extra) {
+          font: 40px/50px $exo-r;
+        }
+
+        a {
+          color: #333;
+          text-decoration: none;
+          border-bottom: 2px dashed #999;
+          @include transition;
+
+          &:hover {
+            border-color: $blue;
+          }
+        }
+      }
+
+      .button {
+        margin: 40px 0;
+
+        @include respond-to(extra) {
+          margin: 70px 0;
+        }
+      }
+
+      .ya-share2__item {
+        margin-right: 10px !important;
+
+        &:last-child {
+          margin-right: 0 !important;
+        }
+      }
+
+      .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+      }
+
+      @include respond-to(desktop) {
+
+        .ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
+          width: 30px !important;
+          height: 30px !important;
+        }
+
+        .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+          background-size: 20px 40px;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &_link {
+        margin: 0 0 0 -100px;
+
+          .ya-share2 {
+            margin: -20px 0 0 30px;
+          }
+        
+        @include respond-to(desktop) {
+          margin: -10px 0 0 -50px;
+
+          .ya-share2 {
+            margin: -20px 0 0 52px;
+          }
+        }
+
+        @include respond-to(extra) {
+          margin: 40px 0 40px -100px;
+
+          .ya-share2 {
+            margin: 40px 0 0 28px;
+          }
+
+          .button {
+            margin: 40px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    margin-top: 60px;
+
+    @include respond-to(extra) {
+      margin-top: 80px;
+    }
+
+    h2 {
+      font: 30px/40px $exo-r;
+      margin: 0 60px 20px;
+      
+      @include respond-to(extra) {
+        font: 50px/60px $exo-r;
+        margin: 0 100px 30px;
+      }
+    }
+
+    p {
+      font: 22px/34px $hr;
+      margin: 0 60px 30px;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        border-bottom: 2px solid $blue;
+        @include transition;
+
+        &:hover {
+          border-color: #999;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 40px;
+
+      input {
+        width: 400px;
+        padding: 10px;
+        letter-spacing: .02em;
+        color: #333;
+        margin-right: 30px;
+        font: 22px/22px $hr;
+        border: 0;
+        border-bottom: 2px solid $blue;
+      }
+
+      button {
+        color: $blue;
+        font: 18px/18px $hb;
+        text-transform: uppercase;
+        background: $tr;
+        @include transition;
+
+        &:hover {
+          color: #20367A;
+        }
+      }
+    }
+
+    &-more {
+      display: none;
+
+      p {
+        margin-bottom: 50px;
+
+        @include respond-to(extra) {
+          margin-bottom: 60px;
+        }
+      }
+
+      &_img {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        @include respond-to(extra) {
+          margin-bottom: 40px;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        p {
+          margin: 0;
+          font: 32px/44px $hr;
+          margin-left: 100px;
+          text-align: left;
+          
+          @include respond-to(extra) {
+            font: 42px/52px $hr;
+          }
+        }
+      }
+
+      &_button {
+
+        .button {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    &-foot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+
+      @include respond-to(extra) {
+        margin-top: 80px;
+      }
+
+      .text {
+        display: inline-block;
+        margin: 0 40px;
+        font: 22px/34px $hr;
+        margin: 0 40px;
+
+        @include respond-to(mac) {
+          font: 30px/42px $hr;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    margin: 60px auto 20px;
+
+    @include respond-to(extra) {
+      margin: 80px auto 20px;
+    }
+
+    p {
+      color: #ccc;
+      font: 14px/14px $hr;
+    }
+  }
+}

@@ -1,0 +1,318 @@
+.cars {
+  padding-top: 40px;
+  margin-top: 40px;
+  background: $white;
+
+  h2 {
+    color: $dark;
+    text-align: center;
+    margin-bottom: 30px;
+    @include fusion(70px, 80px);
+  }
+
+  &-item {
+    cursor: help;
+    position: relative;
+
+    img {
+      max-width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    &-text {
+      width: calc(100% - 20px);
+      height: calc(100% - 25px);
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 2;
+      backdrop-filter: blur(7px);
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      transform: rotateY(180deg);
+      opacity: 0;
+      @include rgba-bg(background-color, $red-club, .1);
+
+      p {
+        color: $white;
+        font: 18px/18px $open-l;
+        
+        &:last-child {
+          margin-top: 3px;
+          font: 20px/20px $open-r;
+        }
+      }
+
+      hr {
+        width: 20px;
+        border: 0;
+        border-top: 1px solid $red-club;
+      }
+
+      &::after {
+        content: '';
+        width: calc(100% - 25px);
+        height: calc(100% - 25px);
+        display: block;
+        border: 2px solid $white;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    &:hover {
+      
+      .cars-item-text {
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0 5px;
+  }
+}
+
+.cars_2 {
+  margin: 60px 0;
+
+  .tabs {
+
+    ul {
+      display: flex;
+      justify-content: center;
+
+      li {
+
+        a {
+          color: #999;
+          text-transform: uppercase;
+          text-decoration: none;
+          @include fusion(40px, 40px);
+          @include transition;
+        }
+
+        &:first-child {
+          margin-right: 40px;
+        }
+
+        &.active {
+          
+          a {
+            color: #000;
+          }
+        } 
+      }
+    }
+  }
+
+  &-cars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 332px);
+    grid-gap: 30px;
+    margin-top: 30px;
+
+    &-item {
+      position: relative;
+      cursor: help;
+
+      .title {
+        position: relative;
+        z-index: 3;
+        margin: 30px;
+        color: #333;
+        font: 40px/40px $open-l;
+        text-align: center;
+      }
+
+      .ball {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        color: #333;
+        font: 100px/100px $open-l;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        @include transition;
+      }
+
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        max-width: 100%;
+        opacity: 1;
+        @include transition;
+      }
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: var(--bg);
+        @include border-radius(10px);
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 1;
+      }
+
+      &:hover {
+
+        img {
+          opacity: .2;
+          @include blur(5px);
+        }
+
+        .ball {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-table {
+
+    ul {
+      counter-reset: ol-counter;
+      margin-top: 40px;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 20px;
+
+        .name {
+          flex: 1 0 auto;
+          position: relative;
+
+          span {
+            font: 26px/26px $open-l;
+            display: block;
+            position: relative;
+            z-index: 2;
+            padding-left: 10px;
+            margin-bottom: -8px;
+          }
+
+          .progress {
+            display: flex;
+            position: relative;
+            z-index: 1;
+            
+            &-item {
+              width: var(--pw);
+              height: 10px;
+              background: #a0daf7;
+              position: relative;
+              z-index: 2;
+              @include border-radius(10px 10px 10px 0);
+            }
+            
+            &-after {
+              width: var(--aw);
+              height: 10px;
+              margin: -3px 0 0 -15px;
+              position: relative;
+              border: 3px solid $bg;
+              background: var(--bg);
+              z-index: 3;
+              @include border-radius(10px);
+
+              &::after {
+                content: attr(data-text);
+                color: var(--bg);
+                font: 20px/20px $open-r;
+                position: absolute;
+                top: -25px; left: 50%;
+                transform: translate(-50%, 0);
+              }
+            }
+
+            &::after {
+              content: '';
+              width: 100%;
+              height: 10px;
+              display: block;
+              position: absolute;
+              bottom: 3;
+              left: 0;
+              background-color: #eee;
+              @include border-radius(10px 10px 10px 0);
+            }
+          }
+        }
+
+        .ball {
+          width: 100px;
+          text-align: right;
+          font: 26px/26px $open-r;
+          margin-top: 3px;
+        }
+
+        &::before {
+          content: counter(ol-counter)'.';
+          counter-increment: ol-counter;
+          font: 20px/20px $open-l;
+          position: absolute;
+          top: 10px; left: 0;
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+
+      p {
+        display: flex;
+        align-items: center;
+        font: 22px/22px $open-l;
+
+        &::before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          display: block;
+          margin-top: 2px;
+          margin-right: 10px;
+          background-color: #a0daf7;
+          @include border-radius(100%);
+        }
+
+        &:nth-of-type(2) {
+          
+          &::before {
+            background-color: #ff9393;
+          }
+        }
+
+        &:nth-of-type(3) {
+          
+          &::before {
+            background-color: #4ee151;
+          }
+        }
+      }
+    }
+  }
+}

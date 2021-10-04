@@ -1,0 +1,1130 @@
+// Import
+@import 'mixin/css3';
+@import 'mixin/gradient';
+@import 'mixin/respond';
+@import 'mixin/fonts';
+@import 'variables/color';
+@import 'layout/reset';
+@import 'layout/button';
+@import 'layout/base';
+@import 'layout/desktop';
+// @import 'plugin/swiper';
+// @import 'scss/plugin/slick';
+// @import 'scss/plugin/popup';
+
+$open-r:   'OpenSans';
+$open-b:   'OpenSans Bold';
+$open-i:   'OpenSans Italic';
+$open-l:   'OpenSans Light';
+$open-bi:  'OpenSans Bold Italic';
+$open-sb:  'OpenSans Semi Bold';
+$open-sbi: 'OpenSans Semi Bold Italic';
+
+@include font-face($open-r,   '../fonts/opensans/', 'OpenSans', 'OpenSans');
+@include font-face($open-b,   '../fonts/opensans/', 'OpenSans-Bold', 'OpenSans-Bold');
+@include font-face($open-i,   '../fonts/opensans/', 'OpenSans-Italic', 'OpenSans-Italic');
+@include font-face($open-l,   '../fonts/opensans/', 'OpenSans-Light', 'OpenSans-Light');
+@include font-face($open-bi,  '../fonts/opensans/', 'OpenSans-BoldItalic', 'OpenSans-BoldItalic');
+@include font-face($open-sb,  '../fonts/opensans/', 'OpenSans-Semibold', 'OpenSans-Semibold');
+@include font-face($open-sbi, '../fonts/opensans/', 'OpenSans-SemiboldItalic', 'OpenSans-SemiboldItalic');
+
+.page-cordiant {
+	background-color: #0081D0;
+  color: #fff;
+  overflow: hidden;
+  overflow-y: scroll;
+	font-family: $open-r;
+
+  header {
+
+    .subscripts {
+      background: url('../img/site/subscript.png');
+
+      .container {
+
+        &:before {
+          background: url("../img/site/subscript-before.png") top left no-repeat;
+        }
+      }
+
+      .subscription {
+
+        &-right, &-left {
+          background: url('../img/site/macbook.svg') top center no-repeat;
+          background-size: contain;
+
+          .profitable {
+            right: 29px;
+          }
+        }
+      }
+    }
+
+    .subscripts .container .subscription-left .title,
+    .subscripts .container .subscription-right .title {color: #000;}
+    .menu-left-item {margin-top: -5px;}
+  }
+
+	.wrapper {
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+
+    &-images {
+      position: relative;
+
+      img {
+        transform: translateX(0px);
+        opacity: 1;
+        @include transition-delay(all 750ms ease-in-out, 0);
+
+        &._3 {
+          position: absolute;
+          bottom: 0;
+        }
+
+        &._4 {
+          width: 700px;
+        }
+
+        &.active {
+          opacity: 0;
+          transform: translateX(-500px);
+        }
+      }
+
+      .svg {
+        height: 30px;
+        position: absolute;
+        top: 80px; left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      .sponsor {
+        color: #fff;
+        font: 10px/10px $open-sb;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 20px; right: 20px;
+        z-index: 2;
+      }
+
+      .link {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 3;
+      }
+    }
+
+    &-content {
+      color: #000;
+      background: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+      &-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        @include respond-to(desktop) {
+          width: 100%;
+          margin-left: 20px;
+        }
+
+        @include respond-to(mac) {
+          width: 600px;
+        }
+
+        @include respond-to(extra) {
+          width: 600px;
+        }
+
+        &_text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          flex: 1 1 auto;
+          position: relative;
+          z-index: 10;
+
+          h1 {
+            width: 100%;
+            color: #0081D0;
+  
+            &:after {
+              content: '';
+              width: 40%;
+              height: 1px;
+              display: block;
+              margin: 0 auto;
+              background: #ccc;
+            }
+  
+            @include respond-to(desktop) {
+              font-size: 36px;
+              line-height: 40px;
+              
+              &:after {
+                margin-top: 25px;
+                margin-bottom: 20px;
+              }
+            }
+    
+            @include respond-to(mac) {
+              font-size: 42px;
+              line-height: 52px;
+              
+              &:after {
+                margin-top: 25px;
+                margin-bottom: 20px;
+              }
+            }
+    
+            @include respond-to(extra) {
+              font-size: 42px;
+              line-height: 62px;
+              
+              &:after {
+                margin-top: 35px;
+                margin-bottom: 40px;
+              }
+            }
+          }
+
+          span {
+            position: relative;
+            z-index: 2;
+  
+            @include respond-to(desktop) {
+              font-size: 14px;
+              line-height: 22px;
+              margin-bottom: 30px;
+            }
+    
+            @include respond-to(mac) {
+              width: 530px;
+              font-size: 16px;
+              line-height: 24px;
+              margin-bottom: 30px;
+            }
+    
+            @include respond-to(extra) {
+              width: 530px;
+              font-size: 16px;
+              line-height: 24px;
+              margin-bottom: 30px;
+            }
+          }
+  
+          p {
+  
+            @include respond-to(desktop) {
+              font-size: 16px;
+              line-height: 28px;
+              margin-bottom: 30px;
+            }
+    
+            @include respond-to(mac) {
+              width: 530px;
+              font-size: 18px;
+              line-height: 32px;
+              margin-bottom: 30px;
+            }
+    
+            @include respond-to(extra) {
+              width: 530px;
+              font-size: 22px;
+              line-height: 36px;
+              margin-bottom: 30px;
+            }
+
+            a {
+              color: #000;
+              text-transform: none;
+              text-decoration: none;
+              letter-spacing: 0;
+              display: inline;
+              border: none;
+              position: relative;
+
+              @include respond-to(desktop) {
+                font-size: 16px;
+                line-height: 28px;
+              }
+      
+              @include respond-to(mac) {
+                font-size: 18px;
+                line-height: 32px;
+              }
+      
+              @include respond-to(extra) {
+                font-size: 22px;
+                line-height: 36px;
+              }
+
+              &:before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                display: block;
+                position: absolute;
+                bottom: -2px; left: 0;
+                background: #4285B7;
+                opacity: .3;
+              }
+
+              &:after {
+                content: '';
+                width: 0;
+                height: 2px;
+                display: block;
+                position: absolute;
+                bottom: -2px; left: 50%;
+                background: #4285B7;
+                opacity: 0;
+                @include transition;
+              }
+
+              &:hover {
+
+                &:after {
+                  width: 100%;
+                  left: 0;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &._main {
+
+      h1  {
+        text-align: center;
+      }
+
+      .wrapper-images {
+
+        .logo_cordiant {
+          position: absolute;
+          top: 64%; left: 13%;
+          z-index: 2;
+  
+          @include respond-to(desktop) {
+            height: 24px;
+            transform: translate(-20%, -80%);
+          }
+  
+          @include respond-to(mac) {
+            height: 26px;
+            transform: translate(-10%, 0%);
+          }
+  
+          @include respond-to(extra) {
+            height: 32px;
+            transform: translate(7%, -30%);
+          }
+        }
+        
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0; left: 0;
+          background-image: url('../img/main.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          z-index: 1;
+        }
+      }
+
+      .butt {
+        color: #0081D0;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: relative;
+        border: 1px solid #0081D0;
+        @include transition-delay(all 550ms ease-in-out, 0);
+  
+        @include respond-to(desktop) {
+          width: 240px;
+          height: 60px;
+          font-size: 16px;
+          line-height: 16px;
+          margin-top: 0px;
+        }
+  
+        @include respond-to(mac) {
+          width: 260px;
+          height: 70px;
+          font-size: 18px;
+          line-height: 18px;
+          margin-top: 0px;
+        }
+  
+        @include respond-to(extra) {
+          width: 300px;
+          height: 80px;
+          font-size: 18px;
+          line-height: 18px;
+          margin-top: 40px;
+        }
+  
+        &:before {
+          content: '';
+          width: 0;
+          height: 1px;
+          display: block;
+          position: absolute;
+          top: -1px; left: 5%;
+          background: #fff;
+          z-index: 1;
+          @include transition-delay(all 750ms ease-in-out, 0);
+        }
+  
+        &:after {
+          content: '';
+          width: 0;
+          height: 1px;
+          display: block;
+          position: absolute;
+          bottom: -1px; right: 5%;
+          background: #fff;
+          z-index: 1;
+          @include transition-delay(all 750ms ease-in-out, 0);
+        }
+  
+        &:hover {
+  
+          &:before {
+            width: 100px;
+            left: calc(95% - 100px);
+          }
+  
+          &:after {
+            width: 100px;
+            right: calc(95% - 100px);
+          }
+        }
+      }
+    }
+
+    &._page {
+
+      h1 {
+        width: 100%;
+        color: #4285B7;
+        position: relative;
+        text-transform: uppercase;
+
+        @include respond-to(desktop) {
+          font-size: 22px;
+          line-height: 36px;
+          text-transform: none;
+          margin-top: 60px;
+          
+          &:after {
+            margin-top: 25px;
+            margin-bottom: 20px;
+          }
+        }
+
+        @include respond-to(mac) {
+          width: 530px;
+          font-size: 24px;
+          line-height: 44px;
+          text-transform: none;
+          margin-top: 60px;
+
+          &:after {
+            margin-top: 25px;
+            margin-bottom: 30px;
+          }
+        }
+
+        @include respond-to(extra) {
+          width: 530px;
+          font-size: 28px;
+          line-height: 48px;
+          text-transform: none;
+          margin-top: 60px;
+
+          &:after {
+            margin-top: 35px;
+            margin-bottom: 30px;
+          }
+        }
+
+        .or {
+          color: #000;
+          font: 16px/16px $open-r;
+          width: 50px;
+          height: 254px;
+          position: absolute;
+          top: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translate(0, -60%);
+          background: url('../img/svg/or.svg') top left no-repeat;
+          z-index: 1;
+
+          @include respond-to(desktop) {
+            left: -53px;
+          }
+  
+          @include respond-to(mac) {
+            left: -103px;
+          }
+  
+          @include respond-to(extra) {
+            left: -103px;
+          }
+        }
+      }
+
+      a {
+
+        @include respond-to(desktop) {
+          width: 290px;
+          font-size: 14px;
+          margin-bottom: 30px; 
+        }
+
+        @include respond-to(mac) {
+          font-size: 14px;
+          width: 300px;
+          height: 60px;
+          margin-bottom: 50px; 
+        }
+
+        @include respond-to(extra) {
+          font-size: 16px;
+          width: 330px;
+          height: 70px;
+          margin-bottom: 50px; 
+        }
+      }
+
+      .radio-control-border {
+
+        @include respond-to(desktop) {
+          width: 460px;
+          margin-bottom: 50px;
+        }
+
+        @include respond-to(mac) {
+          width: 525px;
+          margin-bottom: 60px;
+        }
+
+        @include respond-to(extra) {
+          width: 525px;
+          margin-bottom: 60px;
+        }
+        
+        .control {
+          display: block;
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 25px;
+          padding-top: 3px;
+          cursor: pointer;
+
+          @include respond-to(desktop) {
+            font: 18px/28px $open-r;
+          }
+  
+          @include respond-to(mac) {
+            font: 18px/28px $open-r;
+          }
+  
+          @include respond-to(extra) {
+            font: 22px/36px $open-r;
+          }
+      
+          input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            
+      
+            &:checked {
+      
+              & ~ .control_indicator {
+      
+                &:after {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+      
+          &_indicator {
+            position: absolute;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #ccc;
+
+            @include respond-to(desktop) {
+              height: 14px;
+              width: 14px;
+              top: 8px;
+            }
+
+            @include respond-to(mac) {
+              height: 16px;
+              width: 16px;
+              top: 8px;
+            }
+
+            @include respond-to(extra) {
+              top: 13px;
+            }
+
+            &:after {
+              color: #ccc;
+              content: $check;
+              font-family: $icon;
+              display: block;
+              position: absolute;
+              top: 0; left: 0;
+              opacity: 0;
+              @include transition;
+
+              @include respond-to(desktop) {
+                font-size: 6px;
+                top: -7px;
+                left: 3px;
+              }
+
+              @include respond-to(mac) {
+                font-size: 8px;
+                top: -6px;
+                left: 3px;
+              }
+
+              @include respond-to(extra) {
+                font-size: 8px;
+                top: -10px;
+                left: 3px;
+              }
+            }
+          }
+
+          &_help {
+            width: 90%;
+            color: #999;
+            font-size: 14px;
+            line-height: 22px;
+						padding: 10px 15px;
+						margin: 20px -10px 0 -40px;
+						position: relative;
+						border: 1px solid #ccc;
+
+						&:before {
+              content: '';
+              width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 0 10px 10px 10px;
+							border-color: transparent transparent #fff transparent;
+							position: absolute;
+							z-index: 2;
+              top: -9px; left: 9px;
+            }
+
+            &:after {
+              content: '';
+              width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 0 10px 10px 10px;
+							border-color: transparent transparent #ccc transparent;
+							position: absolute;
+							z-index: 1;
+              top: -10px; left: 9px;
+						}
+						
+						a {
+              color: #999;
+              text-decoration: none;
+              letter-spacing: 0;
+              font-size: 12px;
+              line-height: 18px;
+              display: inline;
+              text-decoration: none;
+              border: none;
+              position: relative;
+
+              &:before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                display: block;
+                position: absolute;
+                bottom: -1px; left: 0 !important;
+                background: #4285B7;
+                opacity: .3;
+                z-index: 1;
+              }
+
+              &:after {
+                content: '';
+                width: 0;
+                height: 1px;
+                display: block;
+                position: absolute;
+                bottom: -1px; left: 50%;
+                background: #4285B7;
+                opacity: 1;
+                z-index: 1;
+                @include transition;
+              }
+
+              &:hover {
+
+                &:after {
+                  width: 100%;
+                  left: 0;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+      
+          &:hover {
+      
+            .control_indicator {
+      
+              &:after {
+                opacity: .5;
+              }
+            }
+          }
+
+          &.yes {
+            
+            .control_indicator {
+              border-color: #21AB2F;
+
+              &:after {
+                color: #21AB2F;
+                opacity: 1;
+              }
+            }
+          }
+
+          &.no {
+            
+            .control_indicator {
+              border-color: #E81414;
+
+              &:after {
+                content: $no;
+                color: #E81414;
+                left: 4px;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .wrapper-images {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrapper-content {
+        height: 100%;
+        position: relative;
+      }
+
+      .wrapper-content-container {
+        justify-content: flex-start;
+      }
+    }
+
+    &._result {
+
+      h1 {
+        text-align: center;
+
+        @include respond-to(desktop) {
+          font-size: 30px;
+          line-height: 30px;
+          
+          &:after {
+            margin-top: 25px;
+            margin-bottom: 20px;
+          }
+        }
+
+        @include respond-to(mac) {
+          font-size: 34px;
+          line-height: 34px;
+          
+          &:after {
+            margin-top: 25px;
+            margin-bottom: 20px;
+          }
+        }
+
+        @include respond-to(extra) {
+          font-size: 36px;
+          line-height: 36px;
+          
+          &:after {
+            margin-top: 35px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .wrapper-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrapper-content {
+        position: relative;
+      }
+
+      .wrapper-content-container {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .help {
+    width: 60%;
+    position: absolute;
+    padding: 70px 40px 0;
+    top: 30%; left: 0%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+    transform: translateX(-300px);
+    @include transition-delay(all 750ms ease-in-out, 0);
+
+    @include respond-to(laptop) {
+      width: 50%;
+    }
+
+    @include respond-to(desktop) {
+      width: 50%;
+    }
+
+    p {
+      color: #fff;
+      font: 24px/38px $open-r;
+      margin-bottom: 50px;
+
+      @include respond-to(laptop) {
+        font: 20px/34px $open-l;
+      }
+
+      @include respond-to(desktop) {
+        font: 20px/34px $open-l;
+      }
+
+      a {
+        color: #fff;
+        font: 24px/34px $open-r !important;
+        text-decoration: none;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 100%;
+          height: 2px;
+          display: block;
+          position: absolute;
+          bottom: -4px; left: 0;
+          background: #fff;
+          opacity: .3;
+        }
+
+        &:after {
+          content: '';
+          width: 0;
+          height: 2px;
+          display: block;
+          position: absolute;
+          bottom: -4px; left: 50%;
+          background: #fff;
+          opacity: 1;
+          @include transition;
+        }
+
+        &:hover {
+
+          &:after {
+            width: 100%;
+            left: 0;
+            opacity: .9;
+          }
+        }
+      }
+    }
+
+    .butt {
+      color: #fff;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      position: relative;
+      border: 1px solid #fff;
+      @include transition-delay(all 550ms ease-in-out, 0);
+
+      @include respond-to(desktop) {
+        width: 240px;
+        height: 60px;
+        font-size: 16px;
+        line-height: 16px;
+        margin-top: 0px;
+      }
+
+      @include respond-to(mac) {
+        width: 260px;
+        height: 70px;
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 0px;
+      }
+
+      @include respond-to(extra) {
+        width: 300px;
+        height: 80px;
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 40px;
+      }
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 1px;
+        display: block;
+        position: absolute;
+        top: -1px; left: 5%;
+        background: #6cc6e9;
+        z-index: 1;
+        @include transition-delay(all 750ms ease-in-out, 0);
+      }
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        display: block;
+        position: absolute;
+        bottom: -1px; right: 5%;
+        background: #6cc6e9;
+        z-index: 1;
+        @include transition-delay(all 750ms ease-in-out, 0);
+      }
+
+      &:hover {
+
+        &:before {
+          width: 100px;
+          left: calc(95% - 100px);
+        }
+
+        &:after {
+          width: 100px;
+          right: calc(95% - 100px);
+        }
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: absolute;
+      top: -10px; left: 50%;
+      margin-left: -20px;
+      background: url('../img/svg/help.svg') center no-repeat;
+      background-size: cover;
+    }
+
+    &.active {
+      opacity: 1;
+      z-index: 100;
+      left: 50%;
+    } 
+  }
+
+  .ya-share2 {
+    
+    @include respond-to(desktop) {
+      width: 480px;    
+    }
+
+    @include respond-to(mac) {
+      width: 530px;
+    }
+
+    @include respond-to(extra) {
+      width: 530px;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__container_size_m {
+      margin-bottom: 40px !important;
+
+      @include respond-to(mac) {
+        // margin-bottom: 20px !important;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+
+      li {
+        width: 40px;
+        margin-right: 20px !important;
+
+        &:nth-child(1) {
+
+          .ya-share2__icon {
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.576-1.496c.588-.19 1.341 1.26 2.14 1.818.605.422 1.064.33 1.064.33l2.137-.03s1.117-.071.587-.964c-.043-.073-.308-.661-1.588-1.87-1.34-1.264-1.16-1.059.453-3.246.983-1.332 1.376-2.145 1.253-2.493-.117-.332-.84-.244-.84-.244l-2.406.015s-.178-.025-.31.056c-.13.079-.212.262-.212.262s-.382 1.03-.89 1.907c-1.07 1.85-1.499 1.948-1.674 1.832-.407-.267-.305-1.075-.305-1.648 0-1.793.267-2.54-.521-2.733-.262-.065-.454-.107-1.123-.114-.858-.009-1.585.003-1.996.208-.274.136-.485.44-.356.457.159.022.519.099.71.363.246.341.237 1.107.237 1.107s.142 2.11-.33 2.371c-.325.18-.77-.187-1.725-1.865-.489-.859-.859-1.81-.859-1.81s-.07-.176-.198-.272c-.154-.115-.37-.151-.37-.151l-2.286.015s-.343.01-.469.161C3.94 7.721 4.043 8 4.043 8s1.79 4.258 3.817 6.403c1.858 1.967 3.968 1.838 3.968 1.838h.957z' fill='%23CCC' fill-rule='evenodd'/%3E%3C/svg%3E");
+          }
+
+          &:hover {
+
+            .ya-share2__badge {
+              border-color: #48729e;
+            }
+
+            .ya-share2__icon {
+              background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.576-1.496c.588-.19 1.341 1.26 2.14 1.818.605.422 1.064.33 1.064.33l2.137-.03s1.117-.071.587-.964c-.043-.073-.308-.661-1.588-1.87-1.34-1.264-1.16-1.059.453-3.246.983-1.332 1.376-2.145 1.253-2.493-.117-.332-.84-.244-.84-.244l-2.406.015s-.178-.025-.31.056c-.13.079-.212.262-.212.262s-.382 1.03-.89 1.907c-1.07 1.85-1.499 1.948-1.674 1.832-.407-.267-.305-1.075-.305-1.648 0-1.793.267-2.54-.521-2.733-.262-.065-.454-.107-1.123-.114-.858-.009-1.585.003-1.996.208-.274.136-.485.44-.356.457.159.022.519.099.71.363.246.341.237 1.107.237 1.107s.142 2.11-.33 2.371c-.325.18-.77-.187-1.725-1.865-.489-.859-.859-1.81-.859-1.81s-.07-.176-.198-.272c-.154-.115-.37-.151-.37-.151l-2.286.015s-.343.01-.469.161C3.94 7.721 4.043 8 4.043 8s1.79 4.258 3.817 6.403c1.858 1.967 3.968 1.838 3.968 1.838h.957z' fill='%2348729e' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+          }
+        }
+
+        &:nth-child(2) {
+
+          .ya-share2__icon {
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.423 20v-7.298h2.464l.369-2.845h-2.832V8.042c0-.824.23-1.385 1.417-1.385h1.515V4.111A20.255 20.255 0 0 0 14.148 4c-2.183 0-3.678 1.326-3.678 3.76v2.097H8v2.845h2.47V20h2.953z' fill='%23CCC' fill-rule='evenodd'/%3E%3C/svg%3E");
+          }
+
+          &:hover {
+
+            .ya-share2__badge {
+              border-color: #3b5998;
+            }
+
+            .ya-share2__icon {
+              background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.423 20v-7.298h2.464l.369-2.845h-2.832V8.042c0-.824.23-1.385 1.417-1.385h1.515V4.111A20.255 20.255 0 0 0 14.148 4c-2.183 0-3.678 1.326-3.678 3.76v2.097H8v2.845h2.47V20h2.953z' fill='%233b5998' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+          }
+        }
+
+        &:nth-child(3) {
+
+          .ya-share2__icon {
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23CCC' fill-rule='evenodd'%3E%3Cpath d='M11.674 6.536a1.69 1.69 0 0 0-1.688 1.688c0 .93.757 1.687 1.688 1.687a1.69 1.69 0 0 0 1.688-1.687 1.69 1.69 0 0 0-1.688-1.688zm0 5.763a4.08 4.08 0 0 1-4.076-4.075 4.08 4.08 0 0 1 4.076-4.077 4.08 4.08 0 0 1 4.077 4.077 4.08 4.08 0 0 1-4.077 4.075zM10.025 15.624a7.633 7.633 0 0 1-2.367-.98 1.194 1.194 0 0 1 1.272-2.022 5.175 5.175 0 0 0 5.489 0 1.194 1.194 0 1 1 1.272 2.022 7.647 7.647 0 0 1-2.367.98l2.279 2.28a1.194 1.194 0 0 1-1.69 1.688l-2.238-2.24-2.24 2.24a1.193 1.193 0 1 1-1.689-1.689l2.279-2.279'/%3E%3C/g%3E%3C/svg%3E");
+          }
+
+          &:hover {
+
+            .ya-share2__badge {
+              border-color: #eb722e;
+            }
+
+            .ya-share2__icon {
+              background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23eb722e' fill-rule='evenodd'%3E%3Cpath d='M11.674 6.536a1.69 1.69 0 0 0-1.688 1.688c0 .93.757 1.687 1.688 1.687a1.69 1.69 0 0 0 1.688-1.687 1.69 1.69 0 0 0-1.688-1.688zm0 5.763a4.08 4.08 0 0 1-4.076-4.075 4.08 4.08 0 0 1 4.076-4.077 4.08 4.08 0 0 1 4.077 4.077 4.08 4.08 0 0 1-4.077 4.075zM10.025 15.624a7.633 7.633 0 0 1-2.367-.98 1.194 1.194 0 0 1 1.272-2.022 5.175 5.175 0 0 0 5.489 0 1.194 1.194 0 1 1 1.272 2.022 7.647 7.647 0 0 1-2.367.98l2.279 2.28a1.194 1.194 0 0 1-1.69 1.688l-2.238-2.24-2.24 2.24a1.193 1.193 0 1 1-1.689-1.689l2.279-2.279'/%3E%3C/g%3E%3C/svg%3E");
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          margin-right: 0 !important;
+
+          .ya-share2__icon {
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 11.794c0 4.304-3.517 7.794-7.855 7.794a7.87 7.87 0 0 1-3.796-.97L4 20l1.418-4.182a7.714 7.714 0 0 1-1.127-4.024C4.29 7.489 7.807 4 12.145 4S20 7.49 20 11.794zm-7.855-6.553c-3.641 0-6.603 2.94-6.603 6.553 0 1.434.467 2.762 1.258 3.842l-.825 2.433 2.537-.806a6.6 6.6 0 0 0 3.633 1.084c3.642 0 6.604-2.94 6.604-6.553s-2.962-6.553-6.604-6.553zm3.967 8.348c-.049-.08-.177-.128-.37-.223-.192-.095-1.139-.558-1.315-.621-.177-.064-.305-.096-.434.095a10.92 10.92 0 0 1-.61.749c-.112.128-.224.143-.416.048-.193-.096-.813-.297-1.549-.948a5.76 5.76 0 0 1-1.07-1.323c-.113-.191-.013-.295.084-.39.086-.086.192-.223.289-.334.096-.112.128-.191.192-.319s.032-.239-.016-.335c-.048-.095-.433-1.035-.594-1.418-.16-.382-.32-.318-.433-.318-.112 0-.24-.016-.369-.016a.71.71 0 0 0-.513.239c-.177.19-.674.653-.674 1.593s.69 1.848.786 1.976c.096.127 1.332 2.119 3.289 2.884 1.958.764 1.958.51 2.31.477.353-.031 1.14-.461 1.3-.908.16-.446.16-.829.113-.908z' fill='%23CCC' fill-rule='evenodd'/%3E%3C/svg%3E");
+          }
+
+          &:hover {
+
+            .ya-share2__badge {
+              border-color: #65bc54;
+            }
+
+            .ya-share2__icon {
+              background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 11.794c0 4.304-3.517 7.794-7.855 7.794a7.87 7.87 0 0 1-3.796-.97L4 20l1.418-4.182a7.714 7.714 0 0 1-1.127-4.024C4.29 7.489 7.807 4 12.145 4S20 7.49 20 11.794zm-7.855-6.553c-3.641 0-6.603 2.94-6.603 6.553 0 1.434.467 2.762 1.258 3.842l-.825 2.433 2.537-.806a6.6 6.6 0 0 0 3.633 1.084c3.642 0 6.604-2.94 6.604-6.553s-2.962-6.553-6.604-6.553zm3.967 8.348c-.049-.08-.177-.128-.37-.223-.192-.095-1.139-.558-1.315-.621-.177-.064-.305-.096-.434.095a10.92 10.92 0 0 1-.61.749c-.112.128-.224.143-.416.048-.193-.096-.813-.297-1.549-.948a5.76 5.76 0 0 1-1.07-1.323c-.113-.191-.013-.295.084-.39.086-.086.192-.223.289-.334.096-.112.128-.191.192-.319s.032-.239-.016-.335c-.048-.095-.433-1.035-.594-1.418-.16-.382-.32-.318-.433-.318-.112 0-.24-.016-.369-.016a.71.71 0 0 0-.513.239c-.177.19-.674.653-.674 1.593s.69 1.848.786 1.976c.096.127 1.332 2.119 3.289 2.884 1.958.764 1.958.51 2.31.477.353-.031 1.14-.461 1.3-.908.16-.446.16-.829.113-.908z' fill='%2365bc54' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+          }
+        }
+      }
+    }
+
+    &__badge {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid #ccc;
+      background: transparent !important;
+      @include transition;
+    }
+
+    &__item {
+      margin-right: 10px !important;
+    }
+
+    &__icon {
+      background-repeat: no-repeat;
+      background-position: center !important;
+      @include transition;
+    }
+  }
+}

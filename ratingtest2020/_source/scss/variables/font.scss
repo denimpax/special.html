@@ -1,0 +1,38 @@
+@mixin title {
+  font-size: 42px;
+  line-height: 56px;
+  font-family: $hl;
+}
+
+@mixin text {
+  font-size: 20px;
+  line-height: 36px;
+  font-family: $hl;
+}
+
+@mixin slider {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: $hl;
+}
+
+@mixin title_m {
+  font-size: 28px;
+  line-height: 40px;
+  font-family: $hl;
+}
+
+@mixin text_m {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: $hl;
+}
+
+@mixin slider_m {
+  font-size: 14px;
+  line-height: 26px;
+  font-family: $hl;
+}
+
+$blockquote: italic 20px/36px Times;
+$blockquote_m: italic 18px/30px Times;

@@ -1,0 +1,502 @@
+// Import
+@import '../../../scss/mixin/css3';
+@import '../../../scss/mixin/gradient';
+@import '../../../scss/mixin/respond';
+@import '../../../scss/mixin/fonts';
+@import '../../../scss/variables/color';
+@import '../../../scss/layout/reset';
+@import '../../../scss/layout/button';
+@import '../../../scss/layout/base';
+@import '../../../scss/_desktop/layout';
+@import '../../../scss/plugin/swiper';
+@import '../../../scss/plugin/slick';
+@import '../../../scss/plugin/popup';
+
+$pts-r:  'PT Sans Regular';
+$pts-b:  'PT Sans Bold';
+$pts-i:  'PT Sans Italic';
+$pts-bi: 'PT Sans Bold Italic';
+@include font-face($pts-r,  '../fonts/ptsans/', 'PTSans-Regular', 'PTSans-Regular');
+@include font-face($pts-b,  '../fonts/ptsans/', 'PTSans-Bold', 'PTSans-Bold');
+@include font-face($pts-i,  '../fonts/ptsans/', 'PTSans-Italic', 'PTSans-Italic');
+@include font-face($pts-bi,  '../fonts/ptsans/', 'PTSans-BoldItalic', 'PTSans-BoldItalic');
+
+.page-cordiant {
+	background-color: #000;
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: #fff;
+	font-family: $pts-r;
+
+  header {
+
+    .subscripts {
+      background: url('../img/site/subscript.png');
+
+      .container {
+
+        &:before {
+          background: url("../img/site/subscript-before.png") top left no-repeat;
+        }
+      }
+
+      .subscription {
+
+        &-right, &-left {
+          background: url('../img/site/macbook.svg') top center no-repeat;
+          background-size: contain;
+
+          .profitable {
+            right: 29px;
+          }
+        }
+      }
+    }
+
+    .subscripts .container .subscription-left .title,
+    .subscripts .container .subscription-right .title {color: #000;}
+    .menu-left-item {margin-top: -5px;}
+  }
+
+	.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  	img {
+  		max-width: 30%;
+  		position: absolute;
+  		top: 90px; left: 12vw;
+  	}
+
+		&-item {
+			width: 380px;
+			margin: 60px 0 10px;
+			padding-right: 50px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h1 {
+				font-size: 42px;
+				line-height: 54px;
+				border-top: 3px solid #3a71a0;
+				border-bottom: 3px solid #3a71a0;
+				padding: 15px 0 18px;
+				margin-bottom: 50px;
+			}
+
+			.link {
+				text-decoration: none;
+				text-transform: uppercase;
+				padding: 25px 50px 20px;
+				border: 2px solid #fff;
+				color: #fff;
+				@include transform(skewX(-10deg));
+
+				span {
+					font-size: 30px;
+					display: inline-block;
+					@include transform(skewX(10deg));
+				}
+
+				&:hover {
+					color: #3a71a0;
+					border-color: #3a71a0;
+				}
+			}
+
+      &-text {
+        color: #fff;
+        font: 20px/30px $pts-r;
+        margin: 10vh auto 0;
+        opacity: .4;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          border-bottom: 2px solid #3a71a0;
+
+          &:hover {
+            background: #3a71a0;
+          }
+        }
+      }
+		}
+
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+	}
+
+	.page {
+
+		&-wrapp {
+			display: flex;
+  		justify-content: space-between;
+  		margin-top: 50px;
+
+  		&-img {
+  			width: 440px;
+  			text-align: center;
+
+  			img {
+  				max-width: 100%;
+  				height: 330px;
+  			}
+
+  			p {
+  				font: 32px/32px $pts-i;
+  				padding-top: 25px;
+  			}
+  		}
+
+  		&-content {
+  			width: 500px;
+
+  			@include respond-to(mac) {
+  				width: 640px;
+  			}
+
+  			h1 {
+  				font-size: 26px;
+  				line-height: 36px;
+  				padding-bottom: 10px;
+  			}
+
+        form {
+          .control {
+          font-family: arial;
+          display: block;
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 5px;
+          padding-top: 3px;
+          cursor: pointer;
+          font-size: 16px;
+          }
+          .control input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          }
+
+          .control-radio {
+          font-size: 22px;
+          margin-top: 20px;
+          }
+
+          .control_indicator {
+          position: absolute;
+          top: 4px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background: transparent;
+          border: 2px solid #fff;
+          }
+          .control-radio .control_indicator {
+          border-radius: 50%;
+          }
+
+          .control:hover input ~ .control_indicator,
+          .control input:focus ~ .control_indicator {
+          background: transparent;
+          }
+
+          .control input:checked ~ .control_indicator {
+          background: transparent;
+          }
+          .control:hover input:not([disabled]):checked ~ .control_indicator,
+          .control input:checked:focus ~ .control_indicator {
+          background: transparent;
+          }
+          .control input:disabled ~ .control_indicator {
+          background: #e6e6e6;
+          opacity: 0.6;
+          pointer-events: none;
+          }
+          .control_indicator:after {
+          box-sizing: unset;
+          content: '';
+          position: absolute;
+          display: none;
+          }
+          .control input:checked ~ .control_indicator:after {
+          display: block;
+          }
+          .control-radio .control_indicator:after {
+          left: 3px;
+          top: 3px;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background: #fff;
+          }
+          .control-radio input:disabled ~ .control_indicator:after {
+          background: #7b7b7b;
+          }
+
+          .ok {
+          color: lime;
+
+          .control_indicator {
+          border: 2px solid lime;
+          }
+
+          .control-radio .control_indicator:after {
+          background: lime !important;
+          }
+          }
+
+          .no {
+          color: red;
+
+          .control_indicator {
+          border: 2px solid red;
+          }
+
+          .control-radio .control_indicator:after {
+          background: red !important;
+          }
+          }
+        }
+
+  			&-center {
+  				display: flex;
+					justify-content: space-between;
+					align-items: center;
+  			}
+
+  			button {
+					color: #fff;
+					border: 2px solid #fff;
+					padding: 10px 30px;
+					font-size: 20px;
+					text-transform: uppercase;
+					background: transparent;
+					margin-top: 35px;
+					@include transition;
+					@include transform(skewX(-10deg));
+
+					span {
+						display: inline-block;
+						@include transform(skewX(10deg));
+					}
+
+					&:hover {
+						color: #3a71a0;
+						border-color: #3a71a0;
+					}
+  			}
+  		}
+		}
+
+		&-info {
+			border-top: 2px solid #3a71a0;
+			color: #fff;
+			font: 20px/30px $pts-r;
+			padding-top: 20px;
+			padding-right: 260px;
+			margin: 50px 0 60px;
+			position: relative;
+
+			&-img {
+				width: 225px;
+				background: #000;
+				padding: 0 0 0 20px;
+				position: absolute;
+				top: -30px; right: 0;
+
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	.result {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+		position: relative;
+
+  	&-wrapp {
+      width: 49%;
+  		display: flex;
+  		flex-direction: row-reverse;
+
+  		&-item {
+				width: 430px;
+				margin: 100px 0 50px;
+				padding-right: 50px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				h1 {
+					font-size: 38px;
+					margin-top: -10px;
+					padding-bottom: 30px;
+				}
+
+				p {
+					font-size: 26px;
+					line-height: 36px;
+					margin-bottom: -10px;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 2px solid #3a71a0;
+
+            &:hover {
+              background: #3a71a0;
+            }
+          }
+				}
+
+        .main-test {
+          margin: 50px 0 0 ;
+
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 20px 50px 20px;
+            border: 2px solid #fff;
+            color: #fff;
+            display: inline-block;
+            @include transform(skewX(-10deg));
+
+            span {
+              font-size: 26px;
+              display: inline-block;
+              @include transform(skewX(10deg));
+            }
+
+            &:hover {
+              color: #3a71a0;
+              border-color: #3a71a0;
+              background: transparent;
+            }
+          }
+        }
+			}
+
+			.img {
+	  		max-width: 30%;
+	  		position: absolute;
+	  		top: 80px; left: 12vw;
+	  	}
+  	}
+
+  	&-wrapper {
+  		width: 49%;
+  		margin-top: 200px;
+  		display: flex;
+  		justify-content: center;
+
+  		&-item {
+  			text-align: center;
+  			color: #fff;
+  			text-decoration: none;
+  			padding: 0 35px 40px;
+  			margin: 0 20px;
+  			position: relative;
+  			@include transition;
+
+  			img {
+  				max-width: 100%;
+  				height: 160px;
+  				z-index: 2;
+  				position: relative;
+  				z-index: 2;
+  				@include transition;
+  			}
+
+  			p {
+  				color: #fff;
+  				padding-top: 15px;
+  				font: 32px/32px $pts-i;
+  				text-shadow: 0 0 7px #000;
+  				@include transition;
+  			}
+
+  			&:hover {
+
+  				p {
+  					color: rgba(255,255,255,.1);
+  					text-shadow: 0 2px 8px #008aff;
+  				}
+  			}
+  		}
+  	}
+	}
+
+  .ya-share2 {
+
+    &__container_size_m {
+      margin-top: 40px !important;
+    }
+
+    &__item {
+      margin-right: 10px !important;
+    }
+
+    &__icon {
+      width: 34px !important;
+      height: 34px !important;
+    }
+  }
+
+  .share {
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .rek {
+    font-size: 12px;
+    padding-bottom: 20px;
+    opacity: .4;
+  }
+
+  ._main {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 110vh;
+    background-position: 0 0;
+    background-image: url('../img/bg-main.jpg');
+  }
+
+	&._otvet {
+		background-position: 0 70px;
+		background-image: url('../img/bg.jpg');
+	}
+}
+
+
+// IE 11 Hack
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.page-cordiant .main-item-text {
+		width: 380px;
+		padding-bottom: 50px;
+	}
+
+	.page-cordiant .result-wrapp-item {
+		margin-bottom: 180px;
+	}
+
+	.page-cordiant .result-wrapp-item p {
+		width: 430px;
+		margin-bottom: 20px;
+	}
+
+	.page-cordiant .result-wrapper-item:hover p {
+		color: #008aff;
+	}
+}

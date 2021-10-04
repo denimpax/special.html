@@ -1,0 +1,540 @@
+// Import
+@import '../../../scss/mixin/css3';
+@import '../../../scss/mixin/gradient';
+@import '../../../scss/mixin/respond';
+@import '../../../scss/mixin/fonts';
+@import '../../../scss/variables/color';
+@import '../../../scss/layout/reset';
+@import '../../../scss/layout/button';
+@import '../../../scss/layout/base';
+@import '../../../scss/_desktop/layout';
+@import '../../../scss/plugin/swiper';
+@import '../../../scss/plugin/slick';
+@import '../../../scss/plugin/popup';
+
+$kia-b: 'kiabold';
+$kia-l: 'kialight';
+$kia-m: 'kiamedium';
+@include font-face($kia-b, '../fonts/kia/', 'kiabold', 'kiabold');
+@include font-face($kia-l, '../fonts/kia/', 'kialight', 'kialight');
+@include font-face($kia-m, '../fonts/kia/', 'kiamedium', 'kiamedium');
+
+.page-kia {
+	background: $bg;
+	min-width: 960px;
+
+  header {
+
+    .subscripts {
+      background: url('../img/site/subscript.png');
+
+      .container {
+
+        &:before {
+          background: url("../img/site/subscript-before.png") top left no-repeat;
+        }
+      }
+
+      .subscription {
+
+        &-right, &-left {
+          background: url('../img/site/macbook.svg') top center no-repeat;
+          background-size: contain;
+
+          .profitable {
+            right: 29px;
+          }
+        }
+      }
+    }
+
+    .subscripts .container .subscription-left .title,
+    .subscripts .container .subscription-right .title {color: #000;}
+    .menu-left-item {margin-top: -5px;}
+  }
+
+
+	.main {
+
+		&-head {
+			width: 100%;
+			height: 90vh;
+			overflow: hidden;
+			background: url('../img/bg-head.png') bottom center no-repeat;
+			position: relative;
+			z-index: 2;
+
+			@include respond-to(mac) {
+				height: 100vh;
+				position: relative;
+				background-position: top center;
+
+				&:after {
+					content: '';
+					width: 100%;
+					height: 30vh;
+					display: block;
+					position: absolute;
+					bottom: 0;
+					background: url('../img/bg.png') top center repeat-y;
+				}
+			}
+
+			h1 {
+				width: 100%;
+				color: #fff;
+				text-shadow: 0 3px 0 #76a7cd;
+				text-align: center;
+				position: absolute;
+				top: 40px; left: 0;
+				font: 60px/66px $exo-r;
+				z-index: 2;
+
+				@include respond-to(laptop) {
+					top: -10px;
+					font-size: 40px;
+					line-height: 46px;
+				}
+				@include respond-to(mac) {top: 90px;}
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			&-img {
+				max-width: 100%;
+				display: block;
+				position: absolute;
+				bottom: 100px; left: 50%;
+				margin-left: -480px;
+				z-index: 2;
+
+				@include respond-to(laptop) {top: 170px;}
+				@include respond-to(mac) {top: 350px;}
+			}
+
+			.container {
+				text-align: justify;
+				padding-top: 510px;
+				position: relative;
+				z-index: 2;
+
+				@include respond-to(laptop) {padding-top: 395px;}
+				@include respond-to(mac) {padding-top: 600px;}
+
+				li {
+					width: 72px;
+					height: 72px;
+					position: relative;
+					display: inline-block;
+
+					img {
+						position: absolute;
+						top: 0; left: 0;
+						@include transition;
+
+						&:hover {
+							top: -5px;
+						}
+					}
+
+					&:first-child {
+						width: 252px;
+						height: 97px;
+						margin-left: -20px;
+
+						img {
+
+							&:hover {
+								top: 0;
+							}
+						}
+					}
+				}
+
+				&:after {
+					content: '';
+					width: 100%;
+					display: inline-block;
+				}
+			}
+
+			.scene {
+				width: 100%;
+				height: 100%;
+				padding: 0;
+  			margin: 0;
+				position: absolute !important;
+				top: 30px; left: 0;
+				z-index: 1;
+
+				.layer {
+
+					img {
+						max-width: 100%;
+					}
+				}
+			}
+
+			.sun {
+				position: absolute;
+				top: -70px; right: 0;
+			}
+		}
+
+		&-content {
+			margin-bottom: -24px;
+			padding-bottom: 15px;
+			overflow: hidden;
+			background: url('../img/bg.png') top center repeat-y;
+
+			h2 {
+				color: #000;
+				margin-bottom: 5px;
+				font: 55px/61px $exo-r;
+			}
+
+			p {
+				color: #000;
+				font: 24px/34px $exo-r;
+			}
+		}
+
+		&-options {
+			padding-top: 30px;
+			overflow: hidden;
+			background: url('../img/bg.png') top center repeat-y;
+
+			.tabs {
+
+				ul {
+					text-align: justify;
+					padding-bottom: 20px;
+
+					li {
+						vertical-align: top;
+						display: inline-block;
+						opacity: .4;
+						@include transition;
+
+						a {
+
+							img {
+								max-width: 100%;
+							}
+						}
+
+						&:nth-of-type(2) {
+							margin-top: -5px;
+						}
+
+						&:hover {
+							opacity: .8
+						}
+
+						&.active {
+							opacity: 1;
+						}
+					}
+
+					&:after {
+						content: '';
+						width: 100%;
+						display: inline-block;
+					}
+				}
+
+				div {
+					@include _clearfix;
+
+					img {
+						float: left;
+					}
+
+					.option {
+						float: right;
+
+						@include respond-to(laptop) {width: 400px;}
+						@include respond-to(mac) {width: 550px;}
+
+						li {
+							width: 100px;
+							height: 160px;
+							position: relative;
+							vertical-align: top;
+							margin-top: 0;
+							opacity: 1;
+
+							@include respond-to(mac) {width: 140px;}
+
+							img {
+								float: none;
+								display: block;
+								position: absolute;
+								top: 0;
+								@include transition;
+							}
+
+							p {
+								padding-left: 8px;
+								text-align: left;
+								display: block;
+								position: absolute;
+								top: 72px;
+								opacity: .8;
+								font: 12px/16px $exo-r;
+								@include transition;
+							}
+
+							&:hover {
+
+								img {
+									top: -5px;
+								}
+
+								p {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.buton {
+				text-align: center;
+				margin-bottom: 50px;
+				clear: both;
+
+				a {
+					color: #fff;
+					text-decoration: none;
+					background: #bc152a;
+					display: inline-block;
+					position: relative;
+					padding: 7px 15px 10px 40px;
+					box-shadow: 0 2px 0 0 #920012;
+					font: 16px Tahoma, sans-serif;
+
+					img {
+						position: absolute;
+						top: 7px; left: 13px;
+					}
+
+					&:nth-of-type(2) {
+						margin: 0 17px;
+					}
+
+					&:hover {
+						background: #545454;
+						box-shadow: 0 2px 0 0 #333;
+					}
+				}
+			}
+
+			.text-more {
+				padding: 20px 0;
+
+				p {
+					font: 16px/20px Tahoma, sans-serif;
+				}
+			}
+
+			table {
+				width: 100%;
+				border-spacing: 0;
+
+				thead {
+
+					tr {
+
+						th {
+							border-bottom: 3px solid #ba0e21;
+							padding: 0 5px 10px;
+							vertical-align: middle;
+							font: bold 16px/20px Tahoma, sans-serif;
+
+							&:nth-of-type(1) {
+								text-align: left;
+							}
+						}
+					}
+				}
+
+				tbody {
+
+					tr {
+
+						td {
+							text-align: center;
+							border-bottom: 1px solid #9a9a9a;
+							padding: 10px 5px;
+							vertical-align: middle;
+							font: 16px/20px Tahoma, sans-serif;
+
+							span {
+
+								&.yes {
+
+									&:before {
+										content: $yes;
+										font: 12px $icon;
+									}
+								}
+
+								&.red {
+									display: block;
+									color: #ba0e21;
+									white-space: nowrap;
+									font: bold 16px/20px Tahoma, sans-serif;
+								}
+							}
+
+							a {
+								color: #ba0e21;
+								text-decoration: none;
+							}
+
+							&:nth-of-type(1) {
+								text-align: left;
+							}
+						}
+
+						&:first-child {
+
+							td {
+								white-space: nowrap;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&-benefit {
+			background: url('../img/bg.png') top center repeat-y;
+
+			.title {
+				margin-bottom: 30px;
+				font: 55px $exo-r;
+			}
+
+			.wrapp {
+				text-align: justify;
+
+				.item {
+					text-decoration: none;
+					display: inline-block;
+					background: #fff;
+					text-align: center;
+					vertical-align: top;
+					box-shadow: 0 1px 2px 0 rgba(0,0,0,.3);
+
+					@include respond-to(laptop) {width: 310px;}
+					@include respond-to(mac) {width: 390px;}
+
+					&-title {
+						color: #000;
+						margin: 10px 0;
+						font: 40px $exo-r;
+					}
+
+					&-price {
+						color: #000;
+						margin: 10px 0;
+						font: 20px $exo-r;
+					}
+
+					&-but {
+						color: #fff;
+						display: block;
+						padding: 10px 0;
+						margin: 20px 0 0;
+						text-decoration: 	none;
+						text-align: center;
+						background: #bc152a;
+						font: 18px Tahoma, sans-serif;
+						font: 18px $exo-r;
+						@include transition;
+					}
+
+					&:first-child {
+
+						.item-price {
+							margin-bottom: 35px;
+						}
+					}
+
+					&:last-child {
+
+						.item-title {
+							font: 35px $exo-r;
+						}
+
+						.item-price {
+							margin-bottom: 28px;
+						}
+					}
+
+					&:hover {
+
+						.item-but {
+							background: #000;
+						}
+					}
+				}
+
+				&:after {
+					content: '';
+					width: 100%;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.more-lnk {
+		width: 50px;
+		height: 50px;
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		z-index: 10;
+		background: url('../img/more.png');
+
+		@include respond-to(mac) {margin: 50px auto 0;}
+	}
+
+	.kia-foot {
+		width: 100%;
+		height: 52px;
+		background: #fff;
+
+		img {
+			float: right;
+			margin-top: -33px;
+		}
+	}
+
+	footer {
+		color: #fff;
+		overflow: hidden;
+		background: #000;
+
+		p {
+			display: inline-block;
+			font: 14px/20px $exo-r;
+		}
+
+		.soc {
+			margin-left: 50px;
+			display: inline-block;
+		}
+	}
+
+	.tooltipster-content {
+		padding: 5px 10px;
+		font-size: 16px !important;
+	}
+}

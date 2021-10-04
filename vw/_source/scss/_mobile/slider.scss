@@ -1,0 +1,107 @@
+.slider {
+  margin: -20px 0 40px;
+
+  &-arrow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 500;
+  }
+
+  .swiper {
+
+    &-slide {
+      color: $black;
+      text-decoration: none;
+      opacity: .3;
+      @include transition;
+      position: relative;
+
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0;
+      }
+
+      p {
+        @include slider_m;
+        font-weight: 100;
+        padding: 30px 40px 0;
+      }
+
+      &-active {
+        opacity: 1;
+      }
+
+      &:before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        display: block;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 200;
+        background: rgba(0, 0, 0, .4) url('../img/svg/zoom.svg') center no-repeat;
+      }
+    }
+
+    &-button {
+
+      &-next {
+        width: 20px;
+        height: 20px;
+        z-index: 100;
+        opacity: .3;
+        background: url('../img/svg/arrow-black-right.svg') center no-repeat;
+        background-size: contain;
+        margin-bottom: 10px;
+        @include transition;
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+
+      &-prev {
+        width: 20px;
+        height: 20px;
+        z-index: 100;
+        opacity: .3;
+        display: block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background: url('../img/svg/arrow-black-left.svg') center no-repeat;
+        background-size: contain;
+        @include transition;
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+
+      &-disabled {
+        opacity: .1;
+
+        &:hover {
+          opacity: .1;
+        }
+      }
+    }
+
+    &-wrapper {
+
+      &._text {
+
+        .swiper-slide {
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.documents {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+
+  a {
+    color: #000;
+    text-decoration: none;
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0);
+    margin: 0 20px 20px 0;
+
+    @include respond-to(laptop) {
+      width: 225px;
+    }
+
+    span {
+      font: 16px/22px $open-sb;
+      margin: 20px 20px 0;
+      text-align: center;
+    }
+
+    &:hover {
+      box-shadow: 0 0 50px 0 rgba(0,0,0,.2);
+    }
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+}

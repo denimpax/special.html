@@ -1,0 +1,300 @@
+.main {
+
+  &-welcome {
+    margin-top: 30px;
+    margin-bottom: 50;
+
+    p {
+      font: 26px/36px $exo-r;
+
+      &:last-child {
+        color: #999;
+        margin: 40px 0;
+        padding: 40px;
+        font: 26px/36px $open-i;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 30px 1px rgba(0,0,0,.1);
+        position: relative;
+
+        a {
+          color: #999;
+          text-decoration: none;
+          font: 40px/40px $open-l;
+          position: absolute;
+          top: -3px; right: 5px;
+          transform: rotate(45deg);
+
+          &:hover {
+            color: $red-dark;
+          }
+        }
+
+        img {
+          width: 100px;
+          height: 100px;
+          margin-right: 40px;
+        }
+      }
+    }
+
+    @include respond-to(desktop) {
+      
+      p {
+        font: 22px/32px $exo-r;
+      }
+    }
+  }
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 40px 0;
+
+    @include respond-to(desktop) {
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    &-item {
+      width: 374px;
+      text-align: center;
+      text-decoration: none;
+      background: #fff;
+      position: relative;
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+      @include transform(scale(1));
+
+      @include respond-to(desktop) {
+        width: 300px;
+      }
+
+      &_images {
+        
+        img {
+          max-width: calc(100% - 60px);
+          display: block;
+          margin: 30px auto;
+          position: relative;
+          z-index: 2;
+
+          @include respond-to(desktop) {
+            margin: 20px auto;
+            max-width: calc(100% - 40px);
+          }
+        }
+
+        &:after {
+          content: '';
+          width: 240px;
+          height: 20px;
+          display: block;
+          background: rgba(0, 0, 0, 0.8);
+          filter: blur(25px);
+          margin: -70px auto 50px;
+        }
+      }
+
+      &_title {
+        color: #000;
+        font: 24px/24px $exo-r, sans-serif;
+      }
+
+      &_price {
+        color: #999;
+        font: 34px/34px $open-sb;
+        padding: 20px 0 30px;
+
+        span {
+
+          &:after {
+            content: $rubl-light;
+            font: 24px/24px $icon;
+            display: inline-block;
+            vertical-align: top;
+            margin: 6px 0 0 5px;
+          }
+        }
+      }
+
+      .button {
+        margin-bottom: 30px;
+      }
+
+      &._last {
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: 30px/40px $exo-r;
+        background: $tr;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0);
+        border: 2px dashed #ccc;
+      }
+
+      &.new {
+
+        &:before {
+          color: #fff;
+          font: 14px/14px $open-b;
+          text-transform: uppercase;
+          letter-spacing: .01em;;
+          content: 'new';
+          width: 100px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #5DA2F7;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+          border-radius: 10px 0px;
+          position: absolute;
+          top: 20px;
+          left: -10px;
+          z-index: 10;
+        }
+
+        &:after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 10px 6.5px 0;
+          border-color: transparent #3B86E2 transparent transparent;
+          position: absolute;
+          top: 50px;
+          left: -10px;
+        }
+      }
+
+      &:hover {
+        @include transform(scale(1.1));
+        box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  &-link {
+    color: #999;
+    text-decoration: none;
+    font: 20px/20px $open-r;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    span {
+
+      &:after {
+        content: $arrow-l;
+        font: 16px $icon;
+        display: inline-block;
+        margin-left: 8px;
+        @include transform(rotate(90deg));
+      }
+    }
+
+    &.active {
+
+      span {
+
+        &:after {
+          @include transform(rotate(270deg));
+        }
+      }
+    }
+
+    &:hover {
+      color: $red-dark;
+    }
+  }
+
+  &-form {
+    display: none;
+    margin-bottom: 50px;
+
+    &-title {
+      width: 500px;
+      font: 30px/40px $exo-r;
+      margin: 0 auto;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      padding: 18px 18px 10px;
+      position: relative;
+      background-color: #fff;
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+
+      label {
+        color: #333;
+        font: 10px/0px $open-b;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+
+      input {
+        color: #8e8e8e;
+        font: 20px/20px $open-r;
+        border: 0;
+      }
+
+      &.err {
+
+        &:after {
+          content: '+';
+          color: #fff;
+          font: 20px/20px $open-b;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $red-dark;
+          border-radius: 100px;
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          @include transform(translate(0, -50%) rotate(45deg));
+        }
+      }
+    }
+
+    &-button {
+      display: flex;
+      justify-content: flex-end;
+
+      .button {
+
+        &:hover {
+          color: $green;
+          border-color: $green;
+        }
+      }
+    }
+
+    form {
+      width: 500px;
+      margin: 0 auto;
+
+      &:before {
+        content: '';
+        width: 150px;
+        height: 2px;
+        display: block;
+        background: $red-dark;
+        margin: 40px auto;
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}

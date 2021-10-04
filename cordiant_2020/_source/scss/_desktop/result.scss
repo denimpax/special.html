@@ -1,0 +1,134 @@
+.result {
+  
+  &-head {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    @include respond-to(extra) {
+      margin-top: 60px;
+    }
+
+    &-img {
+      flex-basis: 560px;
+      position: relative;
+      
+      img {
+        max-width: 100%;
+      }
+
+      svg {
+        width: 290px;
+        height: 40px;
+        position: absolute;
+        top: 60px;
+        right: -180px;
+  
+        path {
+          fill: #233F85;
+        }
+      }
+    }
+
+    &-title {
+      flex-basis: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 100px;
+
+      h1 {
+        color: #333;
+        font: 50px/50px $exo-r;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+
+        span {
+          color: #999;
+        }
+    
+        @include respond-to(hd) {
+          font: 40px/50px $exo-r;
+        }
+      }
+
+      .ya-share2__item {
+        margin-right: 10px !important;
+
+        &:last-child {
+          margin-right: 0 !important;
+        }
+      }
+
+      .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+      }
+
+      @include respond-to(desktop) {
+
+        .ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
+          width: 30px !important;
+          height: 30px !important;
+        }
+
+        .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+          background-size: 20px 40px;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &-content {
+    margin-top: 40px;
+
+    @include respond-to(extra) {
+      margin-top: 60px;
+    }
+
+    p {
+      font: 22px/34px $hr;
+      margin: 0 60px 30px;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        border-bottom: 2px solid $blue;
+        @include transition;
+
+        &:hover {
+          border-color: #999;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    margin: 60px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include respond-to(extra) {
+      margin: 80px auto 20px;
+    }
+
+    p {
+      color: #ccc;
+      font: 14px/14px $hr;
+    }
+
+    svg {
+      width: 362.5px;
+      height: 50px;
+
+      path {
+        fill: #233F85;
+      }
+    }
+  }
+}
