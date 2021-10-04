@@ -3779,6 +3779,9 @@ footer .container .copy {
   left: 50%;
   transform: translate(-50%, 0);
 }
+.cars_2-table ul li .name .progress.opac {
+  opacity: 0.3;
+}
 .cars_2-table ul li .name .progress::after {
   content: "";
   width: 100%;

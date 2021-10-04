@@ -247,6 +247,10 @@
               }
             }
 
+            &.opac {
+              opacity: .3;
+            }
+
             &::after {
               content: '';
               width: 100%;
