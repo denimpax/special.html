@@ -1129,6 +1129,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/_build\/img\/cover\/cover.jpg" : {
+      "ft" : 16384,
+      "iS" : 2274226,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/_build\/img\/cover\/cover.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/_build\/img\/cover\/cover.png" : {
       "ft" : 32768,
       "iS" : 330488,
@@ -1804,12 +1817,28 @@
       "oAP" : "\/_source\/kit\/tpl\/popup\/znaemsky.html",
       "oF" : 0
     },
+    "\/_source\/kit\/tpl\/text_2 copy.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/_source\/kit\/tpl\/text_2 copy.html",
+      "oF" : 0
+    },
     "\/_source\/kit\/tpl\/text_2.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/_source\/kit\/tpl\/text_2.html",
+      "oF" : 0
+    },
+    "\/_source\/kit\/tpl\/text_3.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/_source\/kit\/tpl\/text_3.html",
       "oF" : 0
     },
     "\/_source\/kit\/tpl\/text.kit" : {

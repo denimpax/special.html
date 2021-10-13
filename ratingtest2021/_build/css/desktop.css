@@ -3301,7 +3301,7 @@ footer .container .copy {
 }
 
 .cover {
-  height: 420px;
+  height: 520px;
   overflow: hidden;
   background: #162D42;
 }
@@ -3323,11 +3323,9 @@ footer .container .copy {
   font-size: 130px;
 }
 .cover .container img {
-  height: 360px;
   position: absolute;
-  bottom: 30px;
-  right: 70px;
-  z-index: 2;
+  bottom: 70px;
+  right: 60px;
 }
 .cover .container::after {
   content: "";
@@ -3363,6 +3361,7 @@ footer .container .copy {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  background-color: #fff;
 }
 .cover-footer .container .btn_20 {
   height: 100%;
@@ -3409,9 +3408,6 @@ footer .container .copy {
   height: 100%;
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  background: #ffffff;
 }
 
 .text {
