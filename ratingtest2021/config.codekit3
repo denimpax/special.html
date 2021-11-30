@@ -1817,14 +1817,6 @@
       "oAP" : "\/_source\/kit\/tpl\/popup\/znaemsky.html",
       "oF" : 0
     },
-    "\/_source\/kit\/tpl\/text_2 copy.kit" : {
-      "cB" : 0,
-      "ft" : 2048,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/_source\/kit\/tpl\/text_2 copy.html",
-      "oF" : 0
-    },
     "\/_source\/kit\/tpl\/text_2.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -1847,6 +1839,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/_source\/kit\/tpl\/text.html",
+      "oF" : 0
+    },
+    "\/_source\/kit\/tpl\/video.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/_source\/kit\/tpl\/video.html",
       "oF" : 0
     },
     "\/_source\/scss\/_desktop\/cars.scss" : {
