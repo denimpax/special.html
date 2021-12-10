@@ -2038,9 +2038,20 @@ input, textarea {
   outline: none;
 }
 
+.video {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
 @media only screen and (min-width: 960px) {
   .video {
     margin-top: 60px !important;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .video {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
   }
 }
 .video-wrapper {
