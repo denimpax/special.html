@@ -3149,21 +3149,34 @@ footer .container .copy {
   position: relative;
   z-index: 1;
 }
-.time-item .img time {
-  color: #fff;
-  margin: 20px 20px 0;
-  font: 20px/20px "OpenSans Italic";
-  position: absolute;
+.time-item .img .text {
+  width: 150px;
+  height: 100%;
   z-index: 2;
-  bottom: 40px;
-  left: 32px;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+}
+.time-item .img .text p {
+  color: #fff;
+  margin: 0;
+  font: 30px/10px "Fusion";
+}
+.time-item .img .text time {
+  color: #fff;
+  margin: 20px 0 0;
+  font: 20px/20px "OpenSans Italic";
 }
 @media only screen and (max-width: 959px) {
-  .time-item .img time {
+  .time-item .img .text time {
     font: 16px/16px "OpenSans Italic";
-    left: 26px;
-    bottom: 30px;
   }
 }
 .time-item p {
@@ -3175,7 +3188,7 @@ footer .container .copy {
   filter: grayscale(1);
   opacity: 0.3;
 }
-.time-item._none time {
+.time-item._none .text {
   opacity: 1;
 }
 .time-item._none:hover {
