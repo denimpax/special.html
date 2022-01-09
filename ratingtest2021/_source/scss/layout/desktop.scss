@@ -800,6 +800,12 @@ header {
 	display: flex;
   justify-content: flex-end;
 	align-items: center;
+
+	&-wrapper {
+		display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	}
 	
 	p {
 		color: #ccc;
@@ -811,6 +817,10 @@ header {
 
 		img {
 			height: 42px;
+
+			&[src="img/quartz.svg"] {
+				height: 48px;
+			}
 		}
 	}
 }

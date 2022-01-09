@@ -1407,6 +1407,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/_build\/img\/no_img.png" : {
+      "ft" : 32768,
+      "iS" : 277260,
+      "oA" : 0,
+      "oAP" : "\/_build\/img\/no_img.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/_build\/img\/quartz.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -1839,8 +1852,16 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/_source\/kit\/tpl\/text_3.html",
+      "oF" : 0
+    },
+    "\/_source\/kit\/tpl\/text_4.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/_source\/kit\/tpl\/text_4.html",
       "oF" : 0
     },
     "\/_source\/kit\/tpl\/text.kit" : {
@@ -1851,11 +1872,19 @@
       "oAP" : "\/_source\/kit\/tpl\/text.html",
       "oF" : 0
     },
-    "\/_source\/kit\/tpl\/video.kit" : {
+    "\/_source\/kit\/tpl\/time.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
+      "oAP" : "\/_source\/kit\/tpl\/time.html",
+      "oF" : 0
+    },
+    "\/_source\/kit\/tpl\/video.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 0,
       "oAP" : "\/_source\/kit\/tpl\/video.html",
       "oF" : 0
     },
@@ -2092,6 +2121,20 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/_source\/scss\/layout\/reset.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/_source\/scss\/layout\/time.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/_source\/scss\/layout\/time.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

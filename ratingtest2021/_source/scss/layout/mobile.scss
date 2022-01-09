@@ -1289,6 +1289,12 @@ header {
 	display: flex;
   flex-direction: column;
   align-items: center;
+
+	&-wrapper {
+		display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	}
 	
 	p {
 		color: #ccc;
@@ -1305,6 +1311,10 @@ header {
 
 		img {
 			height: 34px;
+
+			&[src="img/quartz.svg"] {
+				height: 40px;
+			}
 		}
 	}
 

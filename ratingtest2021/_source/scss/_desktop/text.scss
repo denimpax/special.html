@@ -118,6 +118,11 @@
     }
   }
 
+  &._white {
+    background: #fff;
+    padding: 40px 0;
+  }
+
   .partners {
     display: flex;
     justify-content: flex-end;
@@ -133,10 +138,6 @@
     a {
       margin-left: 40px;
       text-decoration: none;
-  
-      img {
-        height: 42px;
-      }
     }
   }
 }

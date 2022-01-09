@@ -30,6 +30,16 @@ $(document).ready(function() {
        $(this).text("Свернуть");
   });
 
+  $(document).on('click', '.js_link_3', function(){
+    $(this).toggleClass('active');
+    $('.js_hide_3').toggleClass('active');
+
+    if ($(this).text() == "Свернуть")
+       $(this).text("Читать далее")
+    else
+       $(this).text("Свернуть");
+  });
+
   // Tabs
   $('.tabs').tabslet({
     mouseevent: 'click',
