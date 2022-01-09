@@ -3070,10 +3070,9 @@ footer .container .copy {
 }
 
 .time {
-  padding: 40px 0 80px;
+  padding: 40px 0 60px;
   margin-bottom: -40px;
-  overflow-x: scroll;
-  background: #162D42;
+  background: #333;
 }
 @media only screen and (max-width: 959px) {
   .time {
@@ -3141,10 +3140,43 @@ footer .container .copy {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
+.time-item .img {
+  position: relative;
+}
+.time-item .img img {
+  max-width: 100%;
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+}
+.time-item .img time {
+  color: #fff;
+  margin: 20px 20px 0;
+  font: 20px/20px "OpenSans Italic";
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  left: 32px;
+  opacity: 0;
+}
+@media only screen and (max-width: 959px) {
+  .time-item .img time {
+    font: 16px/16px "OpenSans Italic";
+    left: 26px;
+    bottom: 30px;
+  }
+}
+.time-item p {
+  font: 30px/36px "Fusion";
+  margin: 15px 20px 20px;
+}
 .time-item._none {
   cursor: default;
   filter: grayscale(1);
   opacity: 0.3;
+}
+.time-item._none time {
+  opacity: 1;
 }
 .time-item._none:hover {
   -moz-transform: scale(1);
@@ -3153,21 +3185,28 @@ footer .container .copy {
   -ms-transform: scale(1);
   transform: scale(1);
 }
-.time-item img {
-  max-width: 100%;
-  border-radius: 16px;
+.time-blank {
+  flex: 0 0 60px;
 }
-.time-item time {
-  color: #999;
-  margin: 20px 20px 0;
-  font: 16px/16px "OpenSans Italic";
+.time-wrapper {
+  overflow-x: scroll;
+  padding-bottom: 20px;
 }
-.time-item p {
-  font: 30px/36px "Fusion";
-  margin: 15px 20px 20px;
-}
-.time-item:last-child {
-  margin-right: 0;
+@media only screen and (min-width: 960px) {
+  .time-wrapper::-webkit-scrollbar {
+    width: 0px;
+  }
+  .time-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .time-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* цвет плашки */
+    border-radius: 20px;
+    /* закругления плашки */
+    border: 6px solid #333;
+    /* padding вокруг плашки */
+  }
 }
 .time .container {
   display: flex;

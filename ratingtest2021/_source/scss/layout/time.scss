@@ -1,8 +1,7 @@
 .time {
-  padding: 40px 0 80px;
+  padding: 40px 0 60px;
   margin-bottom: -40px;
-  overflow-x: scroll;
-  background: $cover;
+  background: #333;
 
   @include respond-to(mobile) {
     margin-top: -30px;
@@ -54,34 +53,73 @@
       @include transform(scale(1.05));
     }
 
-    &._none {
-      cursor: default;
-      filter: grayscale(1);
-      opacity: .3;
+    .img {
+      position: relative;
 
-      &:hover {
-        @include transform(scale(1));
+      img {
+        max-width: 100%;
+        border-radius: 16px;
+        position: relative;
+        z-index: 1;
+      }
+
+      time {
+        color: #fff;
+        margin: 20px 20px 0;
+        font: 20px/20px $open-i;
+        position: absolute;
+        z-index: 2;
+        bottom: 40px;
+        left: 32px;
+        opacity: 0;
+
+        @include respond-to(mobile) {
+          font: 16px/16px $open-i;
+          left: 26px;
+          bottom: 30px;
+        }
       }
     }
-
-    img {
-      max-width: 100%;
-      border-radius: 16px;
-    }
-
-    time {
-      color: #999;
-      margin: 20px 20px 0;
-      font: 16px/16px $open-i;
-    }
-    
     p {
       font: 30px/36px $fus;
       margin: 15px 20px 20px;
     }
 
-    &:last-child {
-      margin-right: 0;
+    &._none {
+      cursor: default;
+      filter: grayscale(1);
+      opacity: .3;
+
+      time {
+        opacity: 1;
+      }
+
+      &:hover {
+        @include transform(scale(1));
+      }
+    }
+  }
+
+  &-blank {
+    flex: 0 0 60px;
+  }
+
+  &-wrapper {
+    overflow-x: scroll;
+    padding-bottom: 20px;
+
+    @include respond-to(hover) {
+      &::-webkit-scrollbar {
+        width: 0px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: $white, $alpha: .4);    /* цвет плашки */
+        border-radius: 20px;       /* закругления плашки */
+        border: 6px solid #333;  /* padding вокруг плашки */
+      }
     }
   }
 
