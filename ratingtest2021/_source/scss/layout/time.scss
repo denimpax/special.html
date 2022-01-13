@@ -63,6 +63,28 @@
         z-index: 1;
       }
 
+      .live {
+        display: flex;
+        align-items: center;
+        color: $white;
+        font: 20px/20px $fus;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+
+        &::before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          display: block;
+          border-radius: 100px;
+          background: $red;
+          margin-right: 10px;
+          animation: pulseRed 1500ms infinite;
+        }
+      }
+
       .text {
         width: 150px;
         height: 100%;

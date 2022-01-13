@@ -40,6 +40,11 @@ $(document).ready(function() {
        $(this).text("Свернуть");
   });
 
+  $(document).on('click', '.kat-link', function(){
+    $(this).hide();
+    $('.kat').slideDown();s
+  });
+
   // Tabs
   $('.tabs').tabslet({
     mouseevent: 'click',
@@ -52,8 +57,15 @@ $(document).ready(function() {
   $('.popup').magnificPopup({
 		type: 'inline',
     modal: true,
-    fixedBgPos: false,
-    fixedContentPos: false,
+    fixedBgPos: true,
+    fixedContentPos: true,
+    closeOnBgClick: true,
+	});
+  $('.popup_itog').magnificPopup({
+		type: 'inline',
+    modal: true,
+    fixedBgPos: true,
+    fixedContentPos: true,
     closeOnBgClick: true,
 	});
 	$(document).on('click', '.popup-close', function (e) {

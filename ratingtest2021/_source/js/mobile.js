@@ -40,6 +40,11 @@ $(document).ready(function() {
        $(this).text("Свернуть");
   });
 
+  $(document).on('click', '.kat-link', function(){
+    $(this).hide();
+    $('.kat').slideDown();s
+  });
+
   // Tabs
   $('.tabs').tabslet({
     mouseevent: 'click',
@@ -50,6 +55,13 @@ $(document).ready(function() {
 
   // Modal Generation
   $('.popup').magnificPopup({
+		type: 'inline',
+    modal: true,
+    fixedBgPos: false,
+    fixedContentPos: false,
+    closeOnBgClick: true,
+	});
+  $('.popup_itogi').magnificPopup({
 		type: 'inline',
     modal: true,
     fixedBgPos: false,

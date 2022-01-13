@@ -126,3 +126,25 @@ input, textarea {
     }
   }
 }
+
+// Kat
+.kat {
+  display: none;
+
+  &-link {
+    color: #333;
+    font: 34px/34px $fus;
+    display: block;
+    text-align: center;
+    padding: 60px 0 80px;
+
+    @include respond-to(mobile) {
+      font: 28px/32px $fus;
+      padding: 60px 20px;
+    }
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
