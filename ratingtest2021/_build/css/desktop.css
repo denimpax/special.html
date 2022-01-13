@@ -3154,11 +3154,11 @@ footer .container .copy {
   }
 }
 .time-item:hover {
-  -moz-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+  -moz-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
 .time-item .img {
   position: relative;
@@ -3167,6 +3167,7 @@ footer .container .copy {
   max-width: 100%;
   border-radius: 16px;
   position: relative;
+  box-shadow: inset 0 10px 5px 0 black;
   z-index: 1;
 }
 .time-item .img .live {
@@ -3263,6 +3264,7 @@ footer .container .copy {
 }
 .time .container {
   display: flex;
+  padding-top: 10px;
 }
 
 .itogi {
@@ -3393,8 +3395,9 @@ footer .container .copy {
   font: 34px/34px "Fusion";
 }
 .itogi-wrapper-item .text-rang {
-  font: 16px/16px "OpenSans";
+  font: 16px/20px "OpenSans";
   margin-top: 10px;
+  text-align: center;
 }
 .itogi-wrapper-item .text-more {
   font: 16px/16px "OpenSans Italic";
