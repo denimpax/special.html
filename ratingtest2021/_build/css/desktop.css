@@ -3608,8 +3608,10 @@ footer .container .copy {
     margin: 0;
   }
 }
-.popup-layout._full .popup-wrapper {
+.popup-layout._full {
   width: 800px;
+}
+.popup-layout._full .popup-wrapper {
   margin: 0 auto;
 }
 @media only screen and (max-width: 959px) {

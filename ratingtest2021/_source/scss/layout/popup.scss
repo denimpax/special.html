@@ -3,13 +3,6 @@
   opacity: 1;
 }
 
-.mfp-ready {
-
-  @include respond-to(mobile) {
-    // height: auto !important;
-  }
-}
-
 .mfp-container {
   padding: 0 !important;
 }
@@ -68,9 +61,9 @@
     }
 
     &._full {
+      width: 800px;
 
       .popup-wrapper {
-        width: 800px;
         margin: 0 auto;
 
         @include respond-to(mobile) {
