@@ -3547,12 +3547,6 @@ footer .container .copy {
   opacity: 1;
 }
 
-@media only screen and (max-width: 959px) {
-  .mfp-ready {
-    height: auto !important;
-  }
-}
-
 .mfp-container {
   padding: 0 !important;
 }

@@ -6,7 +6,7 @@
 .mfp-ready {
 
   @include respond-to(mobile) {
-    height: auto !important;
+    // height: auto !important;
   }
 }
 
