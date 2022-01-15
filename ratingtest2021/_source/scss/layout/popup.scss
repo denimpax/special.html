@@ -117,15 +117,18 @@
         &-text {
 
           p {
-            font: 18px/28px $open-l;
+            color: #333;
+            font: 18px/28px $open-r;
             margin: 20px 30px 0;
     
             @include respond-to(mobile) {
-              font: 18px/28px $open-l;
+              font: 18px/28px $open-r;
               margin: 10px 20px 0;
             }
 
             span {
+              color: #666;
+              font-family: $open-l;
               margin-top: 0;
               font-size: 16px;
               line-height: 24px;
@@ -158,6 +161,28 @@
           &._2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+
+            span {
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+          }
+
+          &._3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+            span {
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+          }
+
+          &._73 {
+            display: grid;
+            grid-template-columns: 70% 30%;
             grid-gap: 20px;
 
             span {
@@ -257,11 +282,12 @@
     &-text {
 
       p {
-        font: 24px/36px $open-l;
+        color: #333;
+        font: 24px/36px $open-r;
         margin: 20px 30px 0;
 
         @include respond-to(mobile) {
-          font: 18px/32px $open-l;
+          font: 18px/32px $open-r;
           margin: 10px 20px 0;
         }
       }
