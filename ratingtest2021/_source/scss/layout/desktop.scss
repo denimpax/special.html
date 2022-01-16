@@ -870,6 +870,17 @@ footer {
 	background: #f0f0f0;
 	padding: 30px 0;
 
+	.pdf {
+		color: #000;
+		font: 14px/14px $open-l;
+		display: block;
+		margin-bottom: 10px;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
 	.container {
 		display: flex;
 		justify-content: space-between;

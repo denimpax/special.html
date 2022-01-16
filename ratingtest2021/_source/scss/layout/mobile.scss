@@ -1337,6 +1337,17 @@ footer {
 		flex-direction: column;
 		align-items: center;
 
+		.pdf {
+			color: #000;
+			font: 14px/14px $open-l;
+			display: block;
+			margin-bottom: 10px;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
 		.copy {
 			color: #000;
 			font: 14px/20px $open-l;
