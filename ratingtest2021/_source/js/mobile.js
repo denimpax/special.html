@@ -40,6 +40,16 @@ $(document).ready(function() {
        $(this).text("Свернуть");
   });
 
+  $(document).on('click', '.js_link_4', function(){
+    $(this).toggleClass('active');
+    $('.js_hide_4').toggleClass('active');
+
+    if ($(this).text() == "Свернуть")
+       $(this).text("Ну-ка, интересно!")
+    else
+       $(this).text("Свернуть");
+  });
+
   $(document).on('click', '.kat-link', function(){
     $(this).hide();
     $('.kat').slideDown();s

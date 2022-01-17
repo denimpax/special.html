@@ -112,6 +112,31 @@
     box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
   }
 }
+@-webkit-keyframes pulseWhite {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulseWhite {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -2089,6 +2114,62 @@ input, textarea {
 }
 .kat-link:hover {
   color: #ea1c24;
+}
+
+.print {
+  padding: 40px 0;
+  background: #5ca2f9;
+  background: -moz-linear-gradient(45deg, #5ca2f9 0%, #3b86e2 100%);
+  background: -webkit-linear-gradient(45deg, #5ca2f9 0%, #3b86e2 100%);
+  background: linear-gradient(45deg, #5ca2f9 0%, #3b86e2 100%);
+}
+@media only screen and (max-width: 959px) {
+  .print {
+    padding: 40px 20px;
+  }
+}
+.print img {
+  max-width: 100%;
+  border-radius: 5px;
+  display: block;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.print p {
+  color: #ffffff;
+  font: 30px/40px "OpenSans Light";
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 959px) {
+  .print p {
+    font: 20px/30px "OpenSans Light";
+    margin-bottom: 20px;
+  }
+}
+.print-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.print-text a {
+  width: 200px;
+  border: 1px solid #ffffff !important;
+  animation: pulseWhite 2000ms infinite;
+}
+.print-text a:hover {
+  color: #5ca2f9 !important;
+  background: #ffffff !important;
+}
+.print .container {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  grid-gap: 60px;
+}
+@media only screen and (max-width: 959px) {
+  .print .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
 }
 
 .button {

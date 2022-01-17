@@ -148,3 +148,60 @@ input, textarea {
     }
   }
 }
+
+// Print
+.print {
+  padding: 40px 0;
+  @include gradient-diogonal-up($blue2, $blue2h);
+
+  @include respond-to(mobile) {
+    padding: 40px 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+  }
+
+  p {
+    color: $white;
+    font: 30px/40px $open-l;
+    margin-bottom: 30px;
+
+    @include respond-to(mobile) {
+      font: 20px/30px $open-l;
+    margin-bottom: 20px;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      width: 200px;
+      border: 1px solid $white !important;
+      animation: pulseWhite 2000ms infinite;
+
+      &:hover {
+        color: $blue2 !important;
+        background: $white !important;
+      }
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    grid-gap: 60px;
+
+    @include respond-to(mobile) {
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+  }
+ }

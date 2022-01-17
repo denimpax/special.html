@@ -1447,6 +1447,39 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/_build/img/itogi/i1.jpg": {
+		"ft": 16384,
+		"iS": 353027,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_build/img/itogi/i1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/_build/img/itogi/i2.jpg": {
+		"ft": 16384,
+		"iS": 365537,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_build/img/itogi/i2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/_build/img/itogi/i3.jpg": {
+		"ft": 16384,
+		"iS": 298287,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_build/img/itogi/i3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/_build/img/itogi/kadoshuk/1.jpg": {
 		"ft": 16384,
 		"iS": 603710,
@@ -3000,6 +3033,14 @@
 		"oAP": "/znaemsky_itogi.html",
 		"oF": 0
 		},
+	"/_source/kit/tpl/print.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/print.html",
+		"oF": 0
+		},
 	"/_source/kit/tpl/text.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -3030,6 +3071,14 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/_source/kit/tpl/text_4.html",
+		"oF": 0
+		},
+	"/_source/kit/tpl/text_5.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/text_5.html",
 		"oF": 0
 		},
 	"/_source/kit/tpl/time.kit": {
