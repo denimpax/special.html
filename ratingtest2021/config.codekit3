@@ -385,6 +385,17 @@
 		"oAP": "/_build/fonts/opensans/OpenSans.woff",
 		"oF": 0
 		},
+	"/_build/img/2022.png": {
+		"ft": 32768,
+		"iS": 322759,
+		"oA": 0,
+		"oAP": "/_build/img/2022.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/_build/img/ar/avatar.jpg": {
 		"ft": 16384,
 		"iS": 12445,
@@ -1215,6 +1226,17 @@
 		"oA": 0,
 		"oAP": "/_build/img/favicon.ico",
 		"oF": 0
+		},
+	"/_build/img/gia.png": {
+		"ft": 32768,
+		"iS": 310420,
+		"oA": 0,
+		"oAP": "/_build/img/gia.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/_build/img/itogi/golovanov/1.jpg": {
 		"ft": 16384,
@@ -2627,6 +2649,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/_build/img/svg/mus.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/_build/img/svg/mus.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/_build/img/svg/next.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -2800,6 +2832,46 @@
 		"oA": 0,
 		"oAP": "/_build/index_m.html",
 		"oF": 2
+		},
+	"/_source/kit/tpl/block_1.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/block_1.html",
+		"oF": 0
+		},
+	"/_source/kit/tpl/block_2.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/block_2.html",
+		"oF": 0
+		},
+	"/_source/kit/tpl/block_3.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/block_3.html",
+		"oF": 0
+		},
+	"/_source/kit/tpl/block_4.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/block_4.html",
+		"oF": 0
+		},
+	"/_source/kit/tpl/block_5.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/block_5.html",
+		"oF": 0
 		},
 	"/_source/kit/tpl/cars.kit": {
 		"cB": 0,
@@ -3041,6 +3113,14 @@
 		"oAP": "/print.html",
 		"oF": 0
 		},
+	"/_source/kit/tpl/sorokin.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/sorokin.html",
+		"oF": 0
+		},
 	"/_source/kit/tpl/text.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -3085,7 +3165,7 @@
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/_source/kit/tpl/time.html",
 		"oF": 0
 		},
@@ -3240,6 +3320,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/_source/scss/layout/block.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_source/scss/layout/block.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/_source/scss/layout/button.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -3327,19 +3420,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/_source/scss/layout/reset.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
-	"/_source/scss/layout/time.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_source/scss/layout/time.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
@@ -3460,6 +3540,14 @@
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
+		},
+	"/block_5.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/block_5.html",
+		"oF": 0
 		},
 	"/bower.json": {
 		"ft": 524288,

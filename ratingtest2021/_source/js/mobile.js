@@ -51,8 +51,8 @@ $(document).ready(function() {
   });
 
   $(document).on('click', '.kat-link', function(){
-    $(this).hide();
-    $('.kat').slideDown();s
+    $('.kat-wrapp').hide();
+    $('.kat').slideDown();
   });
 
   // Tabs
