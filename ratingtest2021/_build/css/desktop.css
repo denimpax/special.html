@@ -3491,7 +3491,7 @@ footer .container .copy {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 10px 0 40px;
+  margin: 10px auto 40px;
 }
 .block_2 .partners img {
   margin-bottom: 0;
@@ -3618,7 +3618,7 @@ footer .container .copy {
   color: #333;
 }
 .block_3 + .partners {
-  margin: 40px 0 0;
+  margin: 40px auto 0;
 }
 @media only screen and (max-width: 959px) {
   .block_3 + .partners {
