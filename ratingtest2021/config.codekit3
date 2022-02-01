@@ -2709,6 +2709,39 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/_build/img/v1.jpg": {
+		"ft": 16384,
+		"iS": 180516,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_build/img/v1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/_build/img/v2.jpg": {
+		"ft": 16384,
+		"iS": 328634,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_build/img/v2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/_build/img/v3.jpg": {
+		"ft": 16384,
+		"iS": 177354,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_build/img/v3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/_build/index_d.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3173,7 +3206,7 @@
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/_source/kit/tpl/video.html",
 		"oF": 0
 		},

@@ -3,6 +3,53 @@
   overflow: hidden;
   background: $cover;
 
+  .video-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding: 20px 40px;
+    margin-top: 20px;
+    color: $white;
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255,255,255,.1);
+    @include transition;
+
+    span {
+      font-size: 30px !important;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 100%;
+      display: block;
+      background: #fff;
+      border-radius: 50px;
+      position: absolute;
+      top: 0;
+      left: -50px;
+      // opacity: 0;
+      box-shadow: 0 0 0 5px #fff;
+      @include transition-delay(all 800ms ease-in-out, 0);
+    }
+
+    &:hover {
+      color: $cover;
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        left: 0;
+      }
+    }
+  }
+
   .container {
     height: 100%;
     display: flex;

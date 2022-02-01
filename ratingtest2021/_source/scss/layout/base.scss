@@ -96,33 +96,95 @@ input, textarea {
 
 // Video
 .video {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-
-  @include respond-to(hover) {
-    margin-top: 60px !important;
-  }
-
-  @include respond-to(mobile) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-  }
-
+  margin-top: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  
   &-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
-    height: 0;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-width: 0;
-      outline-width: 0;
+    @include respond-to(hover) {
+      margin-top: 60px !important;
+    }
+
+    @include respond-to(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      transform: scale(1);
+      @include transition;
+    }
+
+    a {
+      position: relative;
+
+      &::before {
+        content: '\e923';
+        font: 40px/40px $icon;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background: $blue2;
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+      }
+
+      &:hover {
+
+        img {
+          transform: scale(1.05);
+        }
+      }
+
+      @include respond-to(hover) {
+
+        &:first-child {
+          grid-area: 1 / 1 / 2 / 3;
+        }
+
+        &:nth-of-type(2) {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+
+        &:last-child {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+      }
+    }
+  }
+
+  h2 {
+    color: $dark;
+    text-align: center;
+    @include fusion(70px, 80px);
+
+    @include respond-to(mobile) {
+      @include fusion(38px, 48px);
+    }
+
+    &::after {
+      content: '';
+      width: 100px;
+      height: 3px;
+      display: block;
+      margin: 30px auto 50px;
+      background: $red-club;
+
+      @include respond-to(mobile) {
+        width: 50px;
+      }
     }
   }
 }
